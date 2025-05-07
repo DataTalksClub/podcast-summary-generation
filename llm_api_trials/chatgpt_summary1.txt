@@ -1,0 +1,11 @@
+🚀 From Warehouses to the Cloud: Eddy Zulkifly’s Inspiring Data Journey
+
+From optimizing physical warehouses with Excel macros to building digital data platforms in the cloud, Eddy Zulkifly’s career path is anything but conventional. Starting in supply chain operations, Eddy honed his analytical mindset on the ground—quite literally. But his curiosity and love for solving problems led him beyond Excel and into the dynamic world of data engineering.
+
+Eddy's transition was fueled by hands-on learning with tools like Tableau Public, Alteryx, and eventually Python. Pursuing a master’s in analytics, he discovered his passion for modern data stacks and backend systems. Now a senior data engineer at Kinaxis, Eddy supports FinOps teams—applying warehouse optimization principles to cloud cost management across AWS, GCP, and Azure.
+
+Despite the technical leap, Eddy emphasizes that the shift from business analytics to data engineering is accessible. Tools like Docker and Terraform might feel intimidating at first, but they become powerful allies once you grasp the fundamentals.
+
+Whether it’s physical logistics or cloud FinOps, Eddy’s story is a testament to the power of adaptability, continuous learning, and blending human-centric thinking with technical skill.
+
+Keywords: supply chain, data engineering, Excel, Docker, FinOps, cloud cost optimization, digital warehousing, FinOps Foundation.

@@ -1,0 +1,15 @@
+🚀 From Java to AI: How Bartosz Builds Bulletproof Data Pipelines
+
+Meet Bartosz—a seasoned AI and data engineer who’s mastered the journey from Java developer to MLOps expert. In this episode of Data Intensive AI, Bartosz shares how his passion for production-ready solutions led him from banking to building robust, testable AI systems.
+
+🎯 Testing lies at the heart of his engineering philosophy. Whether you're dealing with Spark, SQL, or Python, Bartosz emphasizes that if you can't prove your data pipeline works, you're flying blind. He advocates for integration testing, snapshot testing, and leveraging tools like Great Expectations to catch errors before they erode trust.
+
+💡 The conversation dives deep into why Spark remains his go-to for data engineering, how prompt engineering and AI caching are reshaping workflows, and why tools like ChatGPT, Perplexity, Cursor, and Copilot are essential companions for modern engineers.
+
+📈 From automating LinkedIn lead classification to building AI-powered Chrome extensions, Bartosz proves that AI isn’t just for data scientists—it’s a toolkit for innovators.
+
+✍️ And through consistent blogging since 2017, he’s turned content creation into client attraction.
+
+👉 Want to level up your data game? Start by testing your pipelines—and let AI do the rest.
+
+#DataEngineering #AIEngineering #MLOps #PromptEngineering #Spark #GreatExpectations #LinkedInAutomation #AItools

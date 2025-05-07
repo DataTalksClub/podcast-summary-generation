@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import re
 
 # Step 1: Fetch the main podcast page
 main_page_url = "https://datatalks.club/podcast.html"
@@ -39,12 +38,7 @@ for line in episode_soup.get_text(separator="\n").splitlines():
         continue
 
     if start_collecting:
-        if "subscribe" in line.lower() or "email" in line.lower() or "slack" in line.lower():
-            break
-
-        if re.match(r"^\d{1,2}:\d{2}", line):
-            continue
-
+        # No filters: keep all lines
         if line:
             transcript_lines.append(line)
 
@@ -52,8 +46,8 @@ for line in episode_soup.get_text(separator="\n").splitlines():
 transcript_text = "\n".join(transcript_lines).strip()
 
 if transcript_text:
-    with open("first_latest_episode_transcript.txt", "w", encoding="utf-8") as f:
+    with open("latest_tracscript.txt", "w", encoding="utf-8") as f:
         f.write(transcript_text)
-    print(f"✅ Transcript from {episode_url} saved into 'first_latest_episode_transcript.txt'")
+    print(f"✅ Transcript from {episode_url} saved into 'latest_tracscript.txt'")
 else:
     print("⚠️ No valid transcript found.")

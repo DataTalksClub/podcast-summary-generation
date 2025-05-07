@@ -1,0 +1,23 @@
+First, I got a 'message too long' error.
+
+Then uploading .txt file my result.
+
+🚀 Startups vs. Corporations: Navigating MLOps in the Real World
+
+In this dynamic episode of the DataTalks.Club podcast, Alexey hosts Nemanja—machine learning engineer turned startup veteran—for a deep dive into the evolving landscape of MLOps across startups and enterprises. With experience spanning Fortune 500 giants and lean startups, Nemanja sheds light on everything from tool selection and cloud strategies to technical debt and career advice.
+
+💡 Key themes:
+
+MLOps on a shoestring budget: Start with simple, proven tools. Avoid overengineering.
+
+Cloud vs. on-premise: Startups benefit from SaaS speed; corporations cling to on-premise for compliance.
+
+Technical debt & LLMs: Moving fast with AI coding? Be ready to maintain it later.
+
+Career paths: Startups offer speed, learning, and chaos. Corporations offer structure and depth.
+
+Vendor lock-in: Choose portable, vendor-agnostic tools early. Freedom scales better.
+
+🎯 Whether you're a junior data scientist or a seasoned MLE, this episode offers grounded, experience-based insights on balancing agility with sustainability in real-world ML projects.
+
+👩‍💻 Favorite quote: “Startups are like packs of hunters. You do everything. It’s chaotic—but you learn fast.”

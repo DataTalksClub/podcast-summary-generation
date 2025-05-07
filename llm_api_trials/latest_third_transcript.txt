@@ -1,0 +1,923 @@
+The transcripts are edited for clarity, sometimes with AI.
+If you notice any incorrect information,
+let us know
+.
+0:00 MLOps in corporations versus startups
+6:03 The agility and pace of startups
+7:54 MLOps on a shoestring budget
+12:54 Cloud solutions for startups
+15:06 Challenges of cloud complexity versus on-premise
+19:19 Selecting tools and avoiding vendor lock-in
+22:22 Choosing between a startup and a corporation
+27:30 Flexibility and risks in startups
+29:37 Bureaucracy and processes in corporations
+33:17 The role of frameworks in corporations
+34:32 Advantages of large teams in corporations
+40:01 Challenges of technical debt in startups
+43:12 Career advice for junior data scientists
+44:10 Tools and frameworks for MLOps projects
+49:00 Balancing new and old technologies in skill development
+55:43 Data engineering challenges and reliability in LLMs
+57:09 On-premise vs. cloud solutions in data-sensitive industries
+59:29 Alternatives like Dask for distributed systems
+0:00 MLOps in corporations versus startups
+Alexey
+: This week, we’ll talk about MLOps in corporations versus startups. Our special guest is Nemanja, who’s been on the podcast before. Last year, we discussed machine learning engineering in finance, which turned out to be one of our most popular episodes. (
+1:00
+)
+Alexey
+: Nemanja later mentioned on LinkedIn, “Hey, how about we record another one?” I thought it was a great idea. So, welcome back! It’s a pleasure to have you here again. (
+1:00
+)
+Alexey
+: The questions for today’s interview were prepared by Johanna. Thanks, Johanna, for your help. (
+1:00
+)
+Alexey
+: During our small talk earlier, you gave us a brief update, but maybe you can share a more detailed one. For those who didn’t hear the previous podcast, can you tell us about your career journey and what you’ve been up to in the last year? (
+1:00
+)
+Nemanja
+: Sure! I was born and raised in Belgrade, Serbia, where I completed my bachelor’s and master’s studies in electrical engineering, focusing on signals and systems. This was my first exposure to machine learning theory. (
+2:15
+)
+Nemanja
+: After gaining some work experience there, I moved to Belgium to pursue a PhD in bioengineering. It might sound like a strange switch, but the theory of systems modeling applies across domains. Many data scientists switch fields because the underlying principles are universal. (
+2:15
+)
+Nemanja
+: However, I quickly realized academia wasn’t for me. After a year and a half, I accepted an offer from Deloitte Consulting in Belgium, where I worked for about three years. My PhD was my first paid job in data science, and at Deloitte, I started doing more machine learning engineering, including prototyping models and deploying them. (
+2:15
+)
+Nemanja
+: Back then, MLOps wasn’t a term, but someone had to do it. I learned proper Python development practices, project packaging, and deploying on AWS. By 2019, I was fully focused on machine learning engineering. (
+2:15
+)
+Nemanja
+: Over the last five to six years, I’ve worked mainly in the financial industry, which is why we had our previous talk. I’ve worked with several big banks, including ING, BNP Paribas, Euroclear, and KBC. (
+2:15
+)
+Nemanja
+: In June last year, I decided to become a freelancer, something I’d planned for years. I took a short mission with KBC and then joined a Brussels-based startup called Tempo, where I helped industrialize some Python code. Starting February, I’ll be working with another company in Ghent. (
+2:15
+)
+Nemanja
+: I’ve worked across various industries, including healthcare, transportation, logistics, and chemicals. Most of my experience has been with Fortune 500 companies, but working with a startup has been an eye-opening experience. (
+2:15
+)
+6:03 The agility and pace of startups
+Nemanja
+: Working in a startup feels like flying. You don’t have the bureaucratic restrictions that exist in big corporations. Of course, those restrictions often serve as safety nets, but they can also slow things down. (
+6:03
+)
+Nemanja
+: The last two months have made me want to go back to my previous companies and ask, “Why can’t we move at least half as fast?” I think many managers in traditional corporations could benefit from spending time in a startup to see how agile and fast-paced things can be. (
+6:03
+)
+7:54 MLOps on a shoestring budget
+Alexey
+: When we met at the DataMakers Fest conference, we ended up in the same car and started talking. I also attended your talk, which was about doing MLOps on a shoestring budget. (
+7:54
+)
+Alexey
+: The main idea was that you don’t need fancy tools to get started with MLOps. You showed how to use basic tools and principles to get going. It felt very startup-like—starting simple and adding complexity as needed, versus the corporate approach of planning everything in advance. (
+7:54
+)
+Alexey
+: How well do those ideas translate to the startup world? (
+7:54
+)
+Nemanja
+: They translate very well. Startups have to be lean because they often operate on tight budgets. When I delivered that talk, one of the first slides clarified what “shoestring” can mean. We usually think of it as a tight budget, which is true for startups. (
+9:25
+)
+Nemanja
+: Some startups might raise significant funding, like $500 million, to develop advanced AI, but that’s not the norm. Some startups have tight budgets in terms of money, while others are constrained by time or human resources. (
+9:25
+)
+Nemanja
+: In big companies, there’s usually more money, but you need to choose your battles carefully. It’s like having a gun with six bullets—you need to aim and shoot carefully. That’s the shoestring in a corporation. (
+9:25
+)
+Nemanja
+: In a startup, it’s usually about money and the number of people. Decisions like hiring or adopting new tools require careful consideration. It’s tempting in startups to use many tools because it’s easy to make quick agreements. (
+9:25
+)
+Nemanja
+: In a startup, you can just talk to one or two people and make a decision. This can lead to an explosion of tools and accounts, which is something big corporations prevent. In a corporation, you’re told, “This is the way we do it. End of story.” (
+10:46
+)
+Nemanja
+: For example, in my previous company, onboarding a new vendor was an adventure. It involved so many people, and the contract wasn’t even large. The next time I needed to onboard a new tool, I’d think twice. (
+10:46
+)
+Nemanja
+: In a startup, it’s different. You might sit next to someone and say, “Hey, I just saw this demo. How about we try it?” And the answer is, “Yeah, let’s try it.” That’s exactly how it goes. (
+10:46
+)
+Nemanja
+: At Tempo, where I’m working now, it’s like, “Should we try this? Should we try that? Let’s try Logfire, Grafana, or this other tool.” You experiment and keep what works best. (
+11:54
+)
+Nemanja
+: I think startups should go for vendor solutions, like cloud-based software-as-a-service (SaaS), instead of building their own. Big companies often want to build their own solutions, but that requires maintenance. (
+11:54
+)
+Nemanja
+: When you have four to ten people in a company, you don’t want a dedicated person for BI or infrastructure. You’d rather use SaaS and avoid hiring someone to maintain servers. (
+11:54
+)
+12:54 Cloud solutions for startups
+Nemanja
+: Going on-premise is hard for a startup unless it makes a lot of sense. I think it’s a no-brainer for startups to go for the cloud. However, there needs to be a clever decision because migrating from one cloud to another can be slow and annoying. (
+12:54
+)
+Nemanja
+: Google, for example, has a “catch them while they’re young” program. They offer credits to get startups to use their platform. Many companies take the offer, and some stay even if they’re not entirely happy because migrating is costly. (
+12:54
+)
+Nemanja
+: It’s a strategy. Last time I checked, Google offered significant credits to small businesses—maybe around $50,000. For a small company, that could mean free cloud usage for a year. (
+13:50
+)
+Nemanja
+: But there’s a catch. You have to stay within Google Cloud, and some services might not be included. It’s a bit of a trick. If you burn through the credits in a month, that’s your problem. (
+13:50
+)
+Alexey
+: Can’t it become chaotic? It’s so easy to start using a new tool, and then you end up with a bunch of tools that barely connect, and everything falls apart. (
+14:48
+)
+15:06 Challenges of cloud complexity versus on-premise
+Nemanja
+: Yes, the cloud adds extra complexity. I’ve worked mainly on-premise for about seven to eight years out of my ten years in data science. I always wanted more cloud experience, but when I fully switched to the cloud, I thought, “Wait, I want to go back to on-premise.” (
+15:06
+)
+Nemanja
+: On-premise has its limitations. It’s less flexible, and scaling is a challenge. But in the end, the infrastructure is straightforward. You have machines—bare metal or virtual machines—switches, disks, and applications running behind firewalls. (
+15:06
+)
+Nemanja
+: In the cloud, you have key management, identity management, and so many moving parts to configure. It quickly becomes overwhelming. Without infrastructure as code, it’s a mess. Even with infrastructure as code, it’s manageable but still complex. (
+15:06
+)
+Nemanja
+: If you start configuring things manually, it’s hard to replicate later. For example, I once deployed something through the console due to time constraints. Six months later, I wondered if I could repeat it. Would I remember all the steps? (
+16:25
+)
+Nemanja
+: The cloud adds an extra layer of complexity. You might have one tool for dashboards, another for logging, and so on. There’s no analytical formula to optimize and find the perfect tool stack. It’s more of an NP-hard problem—you just have to make the best choice. (
+16:25
+)
+Alexey
+: As I understand, you work with young companies—startups—that rely on the cloud. But most of your experience has been with big companies. Now, in the last two months, you’ve had to make choices for startups. (
+17:23
+)
+Nemanja
+: Yes, for this startup, the priority was to have certain features ready within two months: a visualization dashboard, an industrialized API, and so on. The goal was to make it robust and fast so we could move to the next stage and launch the product. (
+17:38
+)
+Nemanja
+: Based on experience, I can’t justify trying 20 different tools. Instead, I say, “Based on my experience, this is a good choice. Let’s go with it.” If it takes a day or two to prototype, I show it and ask, “Does this look good? Let’s go with that.” (
+17:38
+)
+Nemanja
+: You can’t go wrong with certain tools. For example, if you choose PostgreSQL as your database, no one will question it. It’s a proven choice. (
+18:29
+)
+Nemanja
+: At the beginning, you might not need complex tools. For example, we recently discussed Kubeflow in Slack. Kubeflow is a full-blown Kubernetes-based MLOps platform. I’ve never tried it, but I’ve seen demos. It seems like a huge pain with all the YAML files and Kubernetes complexity. (
+18:29
+)
+19:19 Selecting tools and avoiding vendor lock-in
+Alexey
+: I tried Kubeflow, and it was a huge pain because of all the YAML files and Kubernetes complexity. Maybe it makes sense in the long run, but at the beginning, you might just need Flask or something simpler. (
+19:19
+)
+Alexey
+: In your talk, you showed how to get started with simple tools instead of going for big solutions that you might need in two years. Right now, the goal is to move quickly and choose the simplest tool for the task. (
+19:19
+)
+Alexey
+: The idea is to make sure it’s fast, reliable, and not overly complicated so you can move quickly. If you need to spend a week configuring Kubeflow, maybe it’s not the best tool for now. (
+19:58
+)
+Nemanja
+: The richer a solution is in features, the more it locks you in. For example, if you’re doing something in Python with scripts on a remote server, you can always change the server or provider. (
+20:17
+)
+Nemanja
+: But if you’re using something like Google Cloud’s Vertex AI or AWS SageMaker, you’re pretty much tied to that platform. If you want to migrate later, you’ll need to retrain models. The question is, were those models trained in a reproducible way? (
+20:17
+)
+Alexey
+: So, the takeaway is to make your choices as portable as possible at the beginning. Choose tools that are more generic rather than specific to a particular vendor. (
+21:14
+)
+Nemanja
+: Yes, that makes you more portable. Some startups might want to start as fast as possible using low-code solutions. If you can only hire a data scientist and not a proper software or systems engineer, you might go with a low-code platform. (
+21:35
+)
+Nemanja
+: In that case, the data scientist develops a model in a notebook environment and deploys it with a click. That can work, but I prefer having the freedom to avoid lock-in. (
+21:35
+)
+22:22 Choosing between a startup and a corporation
+Alexey
+: Let’s imagine I am a machine learning engineer with two offers—one from a startup and one from a Fortune 500 company. How should I decide between the two? (
+22:22
+)
+Alexey
+: Let’s say the startup pays less but offers some stock options. For this scenario, imagine our engineer doesn’t need to prioritize money heavily. (
+22:28
+)
+Nemanja
+: It depends on several factors. Personally, I would lean toward a startup, especially depending on the stage of your career. Are we talking about someone in the early stages of their career? (
+22:58
+)
+Alexey
+: Maybe we can explore what factors we should consider in making this decision. (
+23:11
+)
+Nemanja
+: In a corporation, you typically have job security and a narrow scope of work. If you’re fine specializing in one area, sticking to it, and working a predictable 9-to-5 schedule, then a corporation might be the right choice. This is a legitimate decision, and I followed it for many years. (
+23:17
+)
+Nemanja
+: On the other hand, if you want to move faster, learn quicker, and try out more things without spending unnecessary time in meetings, a startup is a better fit. However, startups come with risks. (
+23:17
+)
+Nemanja
+: For instance, if the atmosphere in a small company is bad, there’s no escaping it. In a larger company, you have the option to switch teams or departments, which provides some flexibility. Large corporations also offer internal mobility, letting you shift between data engineering, machine learning, MLOps, DevOps, and so on. (
+23:17
+)
+Nemanja
+: In startups, if things go south, the impact is more immediate. However, in the right startup environment—like the one I’m in now—it can be incredibly rewarding. That said, I’ve heard stories of less ideal startup experiences. (
+24:39
+)
+Nemanja
+: Startups often involve working toward future gains, like the eventual sale of the company. For someone early in their career, wanting to learn a lot, I also recommend consultancies. Like startups, consultancies expose you to various tools and approaches, allowing you to triangulate patterns and identify best practices. (
+24:39
+)
+Nemanja
+: In large companies, there’s often a rigid approach to processes. For example, I’ve seen CICD pipelines or Python projects set up in ways that were clearly wrong, but employees had adapted to them. Sometimes, they didn’t even realize these setups were suboptimal. (
+25:44
+)
+Nemanja
+: When I pointed out issues to one company, a team member told me she always felt something was wrong but lacked the arguments to explain why. (
+26:10
+)
+Alexey
+: Even if something is wrong in a corporation, you don’t always have the flexibility to change it. (
+26:49
+)
+Nemanja
+: Exactly. If you’ve only ever seen one way of doing things, it’s hard to imagine alternatives. You might feel something is off but lack the knowledge to propose a better solution. That’s where external experience can help. Someone from outside can show a better approach. (
+26:54
+)
+Nemanja
+: If you graduate, join a corporation, and stay there for ten years, you only know one way of doing things. It might not be the best way, but it’s all you’ve learned. In a startup, you explore multiple approaches, gaining broader exposure. (
+27:11
+)
+27:30 Flexibility and risks in startups
+Nemanja
+: Startups also pivot frequently. A small, young startup might shift directions completely based on client demands. One client might leave, and another might request something entirely different. This kind of abrupt change keeps things exciting but also challenging. (
+27:30
+)
+Nemanja
+: For me, startups feel like a pack of hunters navigating the wild, chasing something big and uncertain. There’s a strong sense of camaraderie and ownership. (
+28:08
+)
+Nemanja
+: In the last two months at Tempo, I’ve done work that would require two or three separate teams in a large corporation. Beyond my core tasks—industrializing Python code—I provisioned infrastructure, created pipelines, and managed repositories on my own. (
+28:08
+)
+Nemanja
+: In many big companies, you can’t even create a repository without submitting a ticket. It feels bureaucratic, like waiting in line at city hall. You know how to do the task, but the system won’t let you. (
+29:03
+)
+29:37 Bureaucracy and processes in corporations
+Nemanja
+: Big corporations often label their processes as "agile," but it’s often just waterfall broken into smaller increments. For example, if you miss a quarterly planning session, you’re told to wait three months for the next one. (
+29:37
+)
+Alexey
+: I have PTSD; you have flashbacks. Flashbacks now? Oh, sorry, it’s not for this quarter. (
+30:13
+)
+Nemanja
+: Yeah, yeah, yeah. No, but—how should I say—I said in advance I’m going to bash corporations a bit, but I had a lot of good times there. I had a lot of very good teams, very good friends, which I really love. (
+30:21
+)
+Nemanja
+: And, yeah, these corporations, as I said, they give you some stability. They give you some... I would say you know what to expect there. And you learn some things, also. (
+30:35
+)
+Nemanja
+: For example, this whole networking thing in a big company—it’s even more important than your hands-on knowledge. It’s about building a network within the company and having, what I would call, “my guy” in DevOps or “my guy” in networking. (
+30:47
+)
+Nemanja
+: You have people with whom you have good connections. It shouldn’t be like that because everything should work through requests and processes, but in the end, you know that out of ten people, there’s this one person you know, and they’ll get things done faster for you. (
+30:55
+)
+Nemanja
+: So yeah, again, it’s like a city hall: if you know the right people. (
+31:10
+)
+Alexey
+: I summarize what you said. In a corporation, you get stability, financial safety, and a narrow scope of work. You become a specialist in one thing. Plus, there’s some guidance and framework, which, if you’re just starting, can teach you how to do things. (
+31:23
+)
+Alexey
+: You also have internal mobility. But there’s less flexibility in technology because many decisions have already been made. It can feel like a city hall or town hall because there are so many different teams. (
+31:38
+)
+Alexey
+: To get something done, you often need to create tickets, which adds bureaucratic overhead. As you mentioned, there’s quarterly planning, and if something isn’t planned for this quarter, you may have to wait for the next. (
+31:50
+)
+Alexey
+: In startups, you move and learn faster. There are fewer meetings and less bureaucracy. You work with greenfield projects without legacy frameworks or structures. While frameworks can be helpful, they can also slow you down. (
+32:08
+)
+Nemanja
+: But wait, a good framework should make you move faster. In a corporation, one of my roles was creating frameworks to speed things up. (
+32:39
+)
+Nemanja
+: For example, if we knew that over the next two or three years we’d have similar projects—like building models for email classification and deploying them—then we’d create templates to make deployments faster. (
+33:00
+)
+33:17 The role of frameworks in corporations
+Nemanja
+: That’s how it should work. But something goes wrong when companies slice and dice domains of responsibility too much. (
+33:17
+)
+Nemanja
+: Ideally, developers or application builders shouldn’t even know a DevOps or platform team exists. They should have everything automated and ready to go, only needing to submit a few initial requests to set up infrastructure. (
+33:41
+)
+Nemanja
+: Of course, nobody should be able to spin up 100 VMs with 100 GPUs unchecked, but the process can be streamlined. (
+34:00
+)
+Nemanja
+: These downsides aren’t inevitable in corporations. They have the resources and people to do better. (
+34:14
+)
+34:32 Advantages of large teams in corporations
+Nemanja
+: One advantage in corporations is being part of a big team. If you go on holiday, someone else can pick up your work. In startups, this is much harder because they’re so lean. (
+34:32
+)
+Nemanja
+: In a corporation, there’s always someone to help you troubleshoot or answer questions. In a startup, it’s more chaotic. (
+35:03
+)
+Nemanja
+: There’s a general rule: don’t be the first data scientist in an organization if you’re a junior. It’s fine if you’re senior, but if you’re the only person, look somewhere else. (
+35:09
+)
+Alexey
+: So what you’re saying is that startups have more chaos, and you need to be comfortable with it. (
+35:26
+)
+Nemanja
+: Exactly. It’s like a warpath. You need to be robust. It’s never boring, though! (
+35:32
+)
+Alexey
+: But also, what you didn’t mention—and what I experienced—is that it’s never boring. Yes, and you have this cool end-to-end ownership of things. (
+35:48
+)
+Alexey
+: You feel this: "Okay, I produce some code, and I see it in action." It doesn’t need to go through ten steps of approval or whatever. (
+35:55
+)
+Alexey
+: But on the other hand, because of the constant firefighting mode—constantly pivoting, constantly working on something—things break, and you try to fix them. (
+36:01
+)
+Alexey
+: At least, that was my experience. At the end of the day, I felt exhausted. I gave more than 100%, and it was super difficult for me to do anything after work. (
+36:09
+)
+Alexey
+: After one year, I was like, "I’m burned out." In corporations, that doesn’t happen. (
+36:33
+)
+Alexey
+: You don’t have to move at that speed. In startups, you’re running all the time, whereas in a corporation, it’s more like a walk in the park. (
+36:40
+)
+Nemanja
+: Yeah, but that’s what I’m saying. Both have their pluses and minuses. (
+36:56
+)
+Nemanja
+: For me, it’s refreshing that I can move at my maximum speed. But again, I’ve only been doing this for two months. (
+37:02
+)
+Nemanja
+: If I kept this pace for a year, I’d probably also be close to burnout. But, you know, in Eastern Europe, we don’t have burnout. (
+37:10
+)
+Nemanja
+: Right? What is that? (
+37:22
+)
+Alexey
+: We don’t accept it. (
+37:29
+)
+Alexey
+: But the amount of things I learned—because I needed to build so many things from scratch and solve real problems with real clients—was incredible. (
+37:29
+)
+Nemanja
+: Yeah, that’s true. (
+37:47
+)
+Nemanja
+: But you know what I see as a risk now with LLMs and AI-assisted coding? (
+37:54
+)
+Nemanja
+: It’s a kind of trap. I realized how quickly I could do many things for which I’m not really an expert, and it works. (
+37:59
+)
+Nemanja
+: But I’m thinking, okay, this has only been two months. What if I work like this for two years? (
+38:06
+)
+Nemanja
+: My primary competence is Python, but suddenly, I’m doing Ansible scripts, GitHub pipelines, and HTML with AI's help. (
+38:12
+)
+Nemanja
+: AI helps me so much that I can handle 10–20 different areas. But what happens when this code needs to be maintained? (
+38:23
+)
+Nemanja
+: Because I’ve seen people online bragging about how one person can do three weeks’ work alone. But how much of that code is technical debt? (
+38:35
+)
+Nemanja
+: What part of the code will become a monster to maintain a year later? (
+38:41
+)
+Alexey
+: Ninety percent of it, probably. (
+38:52
+)
+Nemanja
+: Exactly. That’s why I joke that we had "schema-on-write" with SQL, then "schema-on-read" with NoSQL. (
+38:59
+)
+Nemanja
+: Now, with AI coding, it’s "learn-on-write" and later "learn-on-maintain." (
+39:10
+)
+Nemanja
+: When the code breaks, you have to go back and learn it all over again. (
+39:17
+)
+Nemanja
+: It’s going to make things very interesting. (
+39:23
+)
+Alexey
+: For a startup, it might be okay, depending on how much technical debt you let accumulate. (
+39:30
+)
+Nemanja
+: Yeah, but imagine you see some weird code in a company. You run git blame and ask, "Who wrote this?" (
+39:35
+)
+Nemanja
+: Often, I ask, "Why did you do this exception handling in this way?" And the person explains the reasoning. (
+39:41
+)
+Alexey
+: What if that person is you? (
+39:53
+)
+40:01 Challenges of technical debt in startups
+Nemanja
+: Yeah, that also happens. But I think LLMs are drastically increasing the amount of technical debt we’re creating. (
+40:01
+)
+Nemanja
+: You can move fast. I’ve done certain simple applications super quickly. (
+40:14
+)
+Alexey
+: But for a startup, isn’t it okay to move fast and deal with technical debt later? (
+40:26
+)
+Alexey
+: Of course, you need to keep in mind that you’ll have to repay this debt, but you accept it. (
+40:33
+)
+Nemanja
+: Yes, but someone needs to be aware of the risks. (
+40:44
+)
+Nemanja
+: Whenever I do something quick and dirty, I leave a note saying, “This needs to be checked.” (
+40:51
+)
+Nemanja
+: But if you’re a junior, you might not be aware of what you’re leaving behind. (
+40:57
+)
+Nemanja
+: It’s easy to move fast and leave ports open or create security holes. (
+41:03
+)
+Nemanja
+: For example, if your startup’s value is 90% in its data and that data gets leaked, you’ve killed your startup. (
+41:12
+)
+Nemanja
+: Moving fast is fine if you take informed risks. You need to have a strategy and be aware of vulnerabilities you’re living with. (
+41:27
+)
+Nemanja
+: If you rely on LLMs without much thought, you’re risking a lot. (
+41:55
+)
+Alexey
+: So, be ready to repay that debt at some point. (
+42:06
+)
+Nemanja
+: Yes, it’s like a loan—you use it to leverage something and deliver value quickly, but you need to be aware of repayment. (
+42:12
+)
+Alexey
+: That’s why it’s not a good idea for a junior to join a startup as the only data scientist. (
+42:37
+)
+Alexey
+: With LLMs, juniors can do a lot, but their lack of experience means they might not realize what’s suboptimal. (
+42:42
+)
+Alexey
+: Without someone to guide them, it can create big problems. (
+43:06
+)
+43:12 Career advice for junior data scientists
+Alexey
+: For juniors, is it better to join a corporation or a more established company? (
+43:12
+)
+Nemanja
+: Any company where there are at least two or more seniors to learn from is ideal. (
+43:25
+)
+Nemanja
+: As a junior, you’ll learn anywhere in your first 2–3 years, but after that, you might feel saturated. (
+43:31
+)
+Nemanja
+: In consulting, jumping from client to client is normal. But in other fields, jumping from job to job might look bad on your CV. (
+43:48
+)
+44:10 Tools and frameworks for MLOps projects
+Alexey
+: We have quite a few questions. One is: What tools do you use for your MLOps projects, and how do you balance time between new and old tools? (
+44:10
+)
+Nemanja
+: Right now, my approach is to keep things as minimal as possible. (
+44:34
+)
+Nemanja
+: I mainly use Python for scripts and training, and I try to handle orchestration through CI/CD pipelines. (
+44:42
+)
+Nemanja
+: I’m starting a project with Dagster for orchestration, which I’m excited about. (
+45:01
+)
+Nemanja
+: You need some kind of orchestrator. I’ve used MLflow and recently helped a startup set up their internal MLflow tracking server. (
+45:08
+)
+Nemanja
+: For MLOps frameworks, there aren’t many components: model registries, feature stores, etc. (
+45:27
+)
+Nemanja
+: I haven’t set up a feature store yet but try to pick top tools that are mature and established. (
+45:39
+)
+Nemanja
+: For observability, I recently used Logfire, which I really liked. (
+45:55
+)
+Nemanja
+: Logfire is from the creator of Pydantic. It sends detailed logs and tracebacks with minimal setup. (
+46:03
+)
+Nemanja
+: Compared to something like Grafana and Prometheus, Logfire was working within an hour. (
+46:24
+)
+Nemanja
+: It collects application logs, system logs, memory, and CPU usage. (
+46:43
+)
+Nemanja
+: It also has plugins for frameworks like FastAPI and TensorFlow, which add extra functionality. (
+46:50
+)
+Nemanja
+: There are lots of options out there, and many blog posts cover possible configurations. (
+47:05
+)
+Alexey
+: Yeah, so I think, yeah, that sounds—it's the first time I hear about this. So previously, like for logs, the tool I would go with would be ELK: Elasticsearch, Logstash, Kibana. (
+47:14
+)
+Alexey
+: Or sometimes instead of Logstash, you have something else, but it's not Point B. (
+47:21
+)
+Nemanja
+: It's very new. It's like less than a year old, and it's like the big, big new project from the Pantic people. (
+47:26
+)
+Alexey
+: When it comes to Grafana, you don't use it usually? (
+47:32
+)
+Nemanja
+: No, I started and I gave up. It looks like too mature, so I'm not a BI person. And, for example, yeah, recently I used Streamlit for some visualization. (
+47:37
+)
+Nemanja
+: I really like how Streamlit works. Of course, it's so simple. It's so simple, but the only thing I have a problem with—like also MLflow and Streamlit—is the moment you want to get to the point of authentication. (
+47:42
+)
+Nemanja
+: Like, they do have some basic authentication, but it's hard to get like full enterprise-level stuff, you know. (
+47:50
+)
+Nemanja
+: Like, I don't know, integrating with Active Directory or whatnot. For that, you need to take some kind of a paid version. (
+47:56
+)
+Nemanja
+: Databricks has it or whatever, yeah. (
+48:03
+)
+Alexey
+: Yeah, it's not that simple. I remember trying to talk to Databricks people, saying, "Hey, I just want MLflow with authentication. I don’t need anything else, just MLflow." (
+48:11
+)
+Alexey
+: Yeah, but, you know, it only comes with the Databricks platform, so you kind of have to take the whole thing. (
+48:17
+)
+Nemanja
+: Yeah, yeah, that's also, I think, a bad decision. If any vendors are listening, I think every product should be as modular as possible. (
+48:23
+)
+Nemanja
+: And that you can just take that part, you know. If you have like a really good model registry, you should let people use just your model registry. (
+48:29
+)
+Nemanja
+: Or just very good observability, just let people use that one and don't force them to buy everything. (
+48:36
+)
+Alexey
+: Maybe Databricks doesn’t really care about MLflow that much. They care more about selling because this is where they make money. (
+48:41
+)
+Alexey
+: And people eventually just go with Weights & Biases or something like that for their registry or whatever. (
+48:47
+)
+49:00 Balancing new and old technologies in skill development
+Alexey
+: Like, this question actually has three questions. So, the second one is: what's your advice on investing time in new or old tools? (
+49:00
+)
+Alexey
+: I guess the question is like: how do you, um, well, balance between old and new tools? (
+49:05
+)
+Nemanja
+: Yeah, well, I would say the old tools are the ones that have survived everything—the every apocalypse. (
+49:10
+)
+Nemanja
+: You should definitely always learn about them. I would say Linux, you should know Linux, Python—these things are foundational. (
+49:15
+)
+Nemanja
+: Bash scripting, if you know these things. A bit of networking, a bit of Ansible or some of these tools are very, very useful. (
+49:21
+)
+Nemanja
+: A bit of frontend development, just to know how HTML, CSS, and JavaScript work together to make a very simple application. (
+49:26
+)
+Nemanja
+: All these things give you a lot of depth. (
+49:31
+)
+Alexey
+: Maybe you shouldn't go with Java 6, right? (
+49:36
+)
+Nemanja
+: I also don't think that. There are people who are still—there are young people learning mainframe development, you know. (
+49:43
+)
+Nemanja
+: And you still have a lot of mainframe code. So, it's like a gamble. What's your risk appetite? (
+49:48
+)
+Nemanja
+: Do you want to target a certain niche? Yeah, you can learn probably HLL or Perl and find a job with it. (
+49:54
+)
+Nemanja
+: And there will not be a big pool of candidates for that. But then, you have to be ready to be hungry for a couple of months potentially while waiting for the right job. (
+50:00
+)
+Alexey
+: But if you're still coding and you're hungry, it's worth it, right? (
+51:00
+)
+Nemanja
+: But, if you want to play it safe, it's very simple. You open up job postings, make a little scraping script, download a lot of job postings, and see what the repeated keywords are. (
+51:08
+)
+Nemanja
+: And you learn those. That’s basically what I did. That’s how I got into Python. (
+51:15
+)
+Alexey
+: Yeah, and if you do that and see that all companies use Airflow, and that’s all they want... (
+51:27
+)
+Alexey
+: But Airflow is okay—it works, but not the best user experience. There are so many other orchestrators. (
+51:32
+)
+Alexey
+: Even though 70% of companies still stick to Airflow, I understand why most banks still stick to Java, right? (
+51:38
+)
+Alexey
+: Even though there are other languages. So, in this case, I do the scraping. I see these are the tools: Java, Airflow. How do I try to include new things here that not all use? (
+51:45
+)
+Nemanja
+: I would say, from time to time, you need to tick some boxes. That’s what I did with Azure. (
+52:09
+)
+Nemanja
+: Although I’m not currently working on Azure, I got feedback from recruiters that in Belgium, a lot of companies are using Azure. (
+52:15
+)
+Nemanja
+: So, it’s very good to have a certain certification. So, I thought, okay, I’ll get a certification in Azure. (
+52:23
+)
+Nemanja
+: I would say, do at least the bare minimum to understand a tool. You don’t have to become an expert in Airflow. (
+52:29
+)
+Nemanja
+: How much time does it take to know something about it? A couple of days of playing with it. (
+52:35
+)
+Nemanja
+: Then you can say, “I know something.” You can do a course and check the box. (
+52:40
+)
+Nemanja
+: For example, with PySpark, four out of five interviews I had asked me about PySpark. (
+53:00
+)
+Nemanja
+: They even had Spark clusters—though not always. Two out of five times, they had Spark clusters. (
+53:06
+)
+Nemanja
+: But I never spent more than 1% of my time doing anything with Spark. (
+53:12
+)
+Nemanja
+: But it’s like, “Do you have the box?” You said yes, and it’s not important, but it’s still part of the process. (
+53:19
+)
+55:43 Data engineering challenges and reliability in LLMs
+Nemanja
+: I think it’s similar with people in AI. Data engineering is much older than MLOps engineering, and still, you hear many senior data engineers saying, "Hey, we’re still facing the same issues with data quality, lineage, and so on." So yeah, we’re not a fad anymore; we’re not the popular kids. But there’s still work to do. (
+55:43
+)
+Nemanja
+: When I transitioned into machine learning engineering—originally, I was a data scientist—my goal was to build tools for the data scientist I used to be. I wanted to create something that would make my former self’s life easier. But even today, I haven’t seen companies make that experience seamless. (
+55:50
+)
+Nemanja
+: There’s still so much left to do. With LLMs, the challenges are even more complicated. For example, you can hijack many chatbots to write code or do things they weren’t intended for. You might start on an e-commerce site and suddenly manipulate it into doing something else if you’re clever enough. (
+56:03
+)
+Nemanja
+: And to be honest, the fact that I can’t fully rely on LLMs for validation makes me hesitant to use them at all. It feels too unpredictable. As an engineer, I want systems to be predictable, work 100% of the time, and be repeatable unless someone pulls the plug on a server. Having to wonder whether an LLM might hallucinate and return YAML instead of JSON? Call me back when that’s sorted out. (
+56:29
+)
+Alexey
+: That’s interesting because machine learning, in general, isn’t deterministic either. But at least we’ve learned to make it reliable, right? As ML engineers, we’re still figuring that out with LLMs. (
+56:42
+)
+Nemanja
+: Yeah, exactly. At least with classical machine learning, the output is structured in a predictable way, and I can control it. But with LLMs, sometimes it feels like you’re just begging—like, "Please, just give me a valid response. My career depends on it!" There’s even a meme about that. (
+56:52
+)
+57:09 On-premise vs. cloud solutions in data-sensitive industries
+Alexey
+: Right. So maybe let’s take one last question. You mentioned you have experience with on-premise systems. Most corporations you’ve worked with have preferred on-premise over cloud solutions. Luka is asking: Do you think on-premise will be the future for companies that care about data privacy? Especially in fields like finance or healthcare, where data privacy is critical. (
+57:09
+)
+Nemanja
+: Yes, absolutely. That’s one of the main reasons companies are hesitant to fully embrace the cloud. In the financial industry, for example, most companies are still on-premise but are gradually moving to the cloud. However, they’re very cautious about what they migrate. (
+57:29
+)
+Nemanja
+: Technically, these migrations could be done in a few months, but they often take years because of necessary discussions around privacy, encryption, and security risks like man-in-the-middle attacks. (
+57:52
+)
+Nemanja
+: That said, there’s been a trend in recent years of companies moving back to on-premise. If you have a skilled team of engineers, you can save millions. For instance, the creator of Ruby on Rails, DHH, has written about how his company moved back to on-premise and drastically reduced costs. (
+58:04
+)
+Alexey
+: Right. AWS Lambda, for example, is great when you’re just starting out and don’t have a predictable workload. But once your workload stabilizes, it makes sense to switch to dedicated machines that are always running. It’s the same with cloud versus on-premise. At some point, you realize it’s cheaper in the long run to manage it yourself. (
+58:44
+)
+Nemanja
+: Exactly. But to do that, you need the right expertise. A data scientist using a low-code platform probably won’t have the skills to manage an on-premise setup. (
+59:03
+)
+59:29 Alternatives like Dask for distributed systems
+Alexey
+: Alright, one quick question to wrap up. We talked about Spark earlier, and you mentioned you didn’t have to use it extensively, but it’s often a key topic in interviews. Have you used Dask? Do you think it’s a good alternative for distributed training? (
+59:29
+)
+Nemanja
+: I’ve experimented with Dask, but only locally. Once, I had some parallel processing to do and tried chunking a big DataFrame with Dask. But for some reason, it ended up being slower than just using Pandas. (
+59:47
+)
+Nemanja
+: That might have been due to how I used it. Performance depends on what you’re doing—whether you’re aggregating, merging, or something else. For aggregations, Dask might be faster. But for smaller operations like merging, performance can tank. (
+59:58
+)
+Nemanja
+: I’ve written about this before, comparing tools like Spark and Ray. With distributed systems, if you’re just doing a group-by and aggregate, it’s fine. But when you start merging small tables across clusters, it can become a disaster. (
+1:00:04
+)
+Nemanja
+: Dask is a mature tool, and I know it works in a distributed manner like Spark. However, I haven’t seen it widely used in the industry. Companies usually default to Spark for distributed processing. My limited success with Dask doesn’t mean it’s bad—just that I didn’t know how to use it properly. (
+1:00:09
+)
+Alexey
+: That aligns with my experience. About five years ago, Dask couldn’t handle group-by operations well, but I think it’s improved since then. (
+1:01:08
+)
+Alexey
+: Anyway, thanks so much for your time. This was an amazing discussion. It’s always a pleasure to have you as a guest. Maybe we can make this a recurring thing? (
+1:01:41
+)
+Nemanja
+: I’d love that. It’s always great chatting with you. (
+1:01:54
+)
+Alexey
+: Thanks again, and thanks to everyone who joined us. I hope you enjoyed it. See you next time! (
+1:02:00
+)
+Nemanja
+: Bye, everyone! (
+1:02:06
+)
+Subscribe to our weekly newsletter and
+join our Slack
+.
+We'll keep you informed about our events, articles, courses, and everything else happening in the Club.
+Email
+Join
+DataTalks.Club.
+Hosted on
+GitHub Pages
+.
+We use cookies.
