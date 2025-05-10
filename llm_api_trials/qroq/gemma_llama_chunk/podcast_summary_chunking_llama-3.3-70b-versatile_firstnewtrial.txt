@@ -1,0 +1,1 @@
+Eddy Zulkifly shares career insights. He discusses data warehousing with Alexey. Eddy highlights key differences in physical and digital warehousing. He shares cost optimization expertise as a staff data engineer. Building data platforms is a key focus. Eddy manages cloud data and generates unit economics.

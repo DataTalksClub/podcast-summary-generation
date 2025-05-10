@@ -1,0 +1,3 @@
+Alexey and Nemanja delve into the distinct environments of corporate and startup worlds. Nemanja, now at a startup, emphasizes agility and rapid decision-making alongside diverse experiences.  He acknowledges the structure and stability corporations provide.
+
+This work context contrasts starkly with the fast-paced, potentially risky nature of startups.  Alexey highlights the differing rhythms: a methodical corporate pace versus the constant urgency of a startup. Both agree the ideal setting depends on individual preferences.  Nemanja raises persistent challenges facing data engineering, including data quality, lineage, and reliability. The unpredictable nature of LLMs adds another layer of complexity.
