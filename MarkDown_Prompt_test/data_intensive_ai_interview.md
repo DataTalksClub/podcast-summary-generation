@@ -1,0 +1,421 @@
+### Introduction to Bartosz and his background
+
+**Alexey**: This week, we’ll talk about Data Intensive AI. Our special guest today is Bartosz, an AI and data engineer. He specializes in moving AI projects from the “good enough for a demo” phase to production by building testing infrastructure and fixing issues detected by tests. ([0.0](https://www.youtube.com/watch?v=BP6w_vKySN0&t=0s))
+
+**Alexey**: He also teaches programmers and non-programmers how to use AI. He is a public speaker and contributed to a book called 97 Things Every Data Engineer Should Know. ([0.0](https://www.youtube.com/watch?v=BP6w_vKySN0&t=0s))
+
+**Bartosz**: There’s a mistake there. It should be 97 Things Every Data Engineer Should Know. ([2:02](https://www.youtube.com/watch?v=BP6w_vKySN0&t=122s))
+
+**Alexey**: Okay, 97 Things Every Data Engineer Should Know. ([2:07](https://www.youtube.com/watch?v=BP6w_vKySN0&t=127s))
+
+**Bartosz**: Yeah, I noticed. ([2:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=132s))
+
+**Alexey**: Actually, my colleague—now working at Meta—also wrote a chapter there. ([2:18](https://www.youtube.com/watch?v=BP6w_vKySN0&t=138s))
+
+**Bartosz**: It was a very community-based book. ([2:25](https://www.youtube.com/watch?v=BP6w_vKySN0&t=145s))
+
+**Alexey**: Was it 97 authors? ([2:33](https://www.youtube.com/watch?v=BP6w_vKySN0&t=153s))
+
+**Alexey**: Bartosz ([2:33](https://www.youtube.com/watch?v=BP6w_vKySN0&t=153s))
+
+**Alexey**: No, some people contributed two or three chapters. I contributed one chapter about testing. ([2:33](https://www.youtube.com/watch?v=BP6w_vKySN0&t=153s))
+
+**Alexey**: So you like testing? ([2:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=167s))
+
+**Alexey**: Bartosz ([2:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=167s))
+
+**Alexey**: Well, “like” might not be the right word, but I do it. ([2:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=167s))
+
+**Alexey**: You don’t dislike it? ([2:55](https://www.youtube.com/watch?v=BP6w_vKySN0&t=175s))
+
+**Alexey**: Bartosz ([2:55](https://www.youtube.com/watch?v=BP6w_vKySN0&t=175s))
+
+**Alexey**: I accept that you have to do it. ([2:55](https://www.youtube.com/watch?v=BP6w_vKySN0&t=175s))
+
+**Alexey**: Many engineers and developers aren’t fans of writing tests. I sometimes start a project, and when it works, I realize it might fall apart later. That’s when I start covering it with tests. I don’t follow test-driven development because it’s difficult for me to start with a test and make sure it fails. ([3:03](https://www.youtube.com/watch?v=BP6w_vKySN0&t=183s))
+
+**Alexey**: We’ll talk about that later. Anyway, welcome to the interview, Bartosz! ([3:03](https://www.youtube.com/watch?v=BP6w_vKySN0&t=183s))
+
+### Bartosz’s career journey from Java development to AI engineering
+
+**Bartosz**: I started as a Java developer many years ago, working in the banking industry. Then, I moved to data engineering. Initially, I wanted to be a data scientist and worked at a startup for a few months. I realized it wasn’t for me, and I preferred putting things into production. ([4:00](https://www.youtube.com/watch?v=BP6w_vKySN0&t=240s))
+
+**Bartosz**: So, I switched to data engineering and stayed in that area until I discovered MLOps. That allowed me to go back to machine learning but focus on deployment and testing. Now, I’ve shifted more toward AI engineering, still related to data. I avoid building backend applications or data pipelines unless they involve AI. ([4:00](https://www.youtube.com/watch?v=BP6w_vKySN0&t=240s))
+
+**Alexey**: Interesting. We had a similar career path. I also started with Java development and worked at a bank in Poland. Then, I thought, “Enough of banking,” and moved into data science. ([5:26](https://www.youtube.com/watch?v=BP6w_vKySN0&t=326s))
+
+**Bartosz**: Yes, I try to publish every week. I can’t always promise that, but the goal is to publish something every Monday. I’ve tried different schedules, like publishing three times a week or even daily for 100 days. That was a terrible experience, but also interesting because I ran out of ideas after 20 days. ([6:04](https://www.youtube.com/watch?v=BP6w_vKySN0&t=364s))
+
+**Alexey**: Did you write a blog post every day for 100 days? ([6:55](https://www.youtube.com/watch?v=BP6w_vKySN0&t=415s))
+
+**Bartosz**: I published every day for 100 days. I tried to write two posts daily to have backups for later. ([7:02](https://www.youtube.com/watch?v=BP6w_vKySN0&t=422s))
+
+**Alexey**: During COVID, I tried posting on LinkedIn every day for 100 days. After 20 days, I struggled to find ideas. It was exhausting, and I burned out after a month. ([7:14](https://www.youtube.com/watch?v=BP6w_vKySN0&t=434s))
+
+**Bartosz**: Now, I publish every weekday on LinkedIn. It’s easier because there’s a lot happening in AI to write about. ([7:49](https://www.youtube.com/watch?v=BP6w_vKySN0&t=469s))
+
+**Alexey**: How long have you been writing? ([8:02](https://www.youtube.com/watch?v=BP6w_vKySN0&t=482s))
+
+**Bartosz**: I’ve been blogging since 2017. I have around 480 articles. ([8:07](https://www.youtube.com/watch?v=BP6w_vKySN0&t=487s))
+
+**Alexey**: Now you write about AI. Before, you wrote about data engineering and data science? ([8:42](https://www.youtube.com/watch?v=BP6w_vKySN0&t=522s))
+
+**Bartosz**: Yes, I wrote about whatever I was doing at work. ([8:48](https://www.youtube.com/watch?v=BP6w_vKySN0&t=528s))
+
+### The importance of testing in data engineering
+
+**Alexey**: How did you end up writing a chapter for 97 Things Every Data Engineer Should Know? ([9:05](https://www.youtube.com/watch?v=BP6w_vKySN0&t=545s))
+
+**Bartosz**: I noticed they were looking for contributions, so I volunteered. I used one of my blog articles as the submission. ([9:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=552s))
+
+**Alexey**: So you already had the article and just sent it? ([9:38](https://www.youtube.com/watch?v=BP6w_vKySN0&t=578s))
+
+**Bartosz**: Yes, it was accepted. ([9:41](https://www.youtube.com/watch?v=BP6w_vKySN0&t=581s))
+
+**Alexey**: What are the 97 things every data engineer should know? ([9:46](https://www.youtube.com/watch?v=BP6w_vKySN0&t=586s))
+
+**Bartosz**: In my case, it was about the few words you don’t want to hear as a data engineer: “This number doesn’t look correct on the dashboard.” Because you immediately lose trust. If you make a mistake like this, it’s hard to regain trust. So, it was an observation that led me to write about the importance of testing and verification of data. ([9:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=591s))
+
+**Alexey**: Why is testing important? Why should we run tests, and how is it related to the phrase, “This number doesn’t look correct”? ([10:26](https://www.youtube.com/watch?v=BP6w_vKySN0&t=626s))
+
+**Bartosz**: If you have a data pipeline and cannot prove it works correctly, how can you prove the number is correct? You need tests to prove it. Of course, we can argue whether software tests prove something works correctly or just show that you can’t detect a bug with what you have. But at least you have tests. Then, we can wonder if they are good enough. ([10:44](https://www.youtube.com/watch?v=BP6w_vKySN0&t=644s))
+
+### How to create tests for data pipelines
+
+**Alexey**: So, at least you have some certainty that your pipeline is functional. If someone says, “This number doesn’t look correct,” you can say, “It should be right, but let’s figure out why you think so.” ([11:19](https://www.youtube.com/watch?v=BP6w_vKySN0&t=679s))
+
+**Bartosz**: Yes, and you have something to rely on while debugging. If you see a behavior and there’s a test for it, you know it was intentional. Otherwise, you might not remember what it’s supposed to do. ([11:31](https://www.youtube.com/watch?v=BP6w_vKySN0&t=691s))
+
+**Alexey**: How do we create tests for data pipelines? ([11:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=707s))
+
+**Bartosz**: As you said earlier, it’s often easier not to start with tests, and I agree. Make the pipeline run first, then observe the outputs and decide what’s acceptable. Use those as test cases. It might not catch all errors immediately, especially edge cases, but it’s a starting point. ([11:53](https://www.youtube.com/watch?v=BP6w_vKySN0&t=713s))
+
+**Bartosz**: I used to think test-driven development was the way to go, but I don’t push it anymore. It’s more difficult in data engineering because you’re not testing a single function. You’re dealing with pipelines, data preparation, and more. It’s not as convenient. ([11:53](https://www.youtube.com/watch?v=BP6w_vKySN0&t=713s))
+
+### Tools and approaches for testing data pipelines
+
+**Alexey**: What kind of tools do you use? Correct me if I’m wrong, but are you suggesting we create a data pipeline and then use integration tests rather than unit tests? ([13:14](https://www.youtube.com/watch?v=BP6w_vKySN0&t=794s))
+
+**Bartosz**: I’m not sure if integration tests are the right way, but unit tests are less useful in data pipelines. We have to do integration testing. ([13:32](https://www.youtube.com/watch?v=BP6w_vKySN0&t=812s))
+
+**Alexey**: So, we run sample data through the pipeline and check if the output matches our expectations? ([13:50](https://www.youtube.com/watch?v=BP6w_vKySN0&t=830s))
+
+**Bartosz**: Yes, that’s snapshot testing. If you prepare the input data and know what to expect, you can name the tests according to the business rules they’re testing. It’s like test-driven development but not in the same order. ([14:04](https://www.youtube.com/watch?v=BP6w_vKySN0&t=844s))
+
+**Alexey**: If your data pipeline is a Python script using pandas, it’s relatively easy to test. You can create functions and test them with unit tests. For Spark jobs, it’s less straightforward, but you can isolate functions like UDFs. Are there tools that work for all data pipelines, or how do you choose the tools? ([14:37](https://www.youtube.com/watch?v=BP6w_vKySN0&t=877s))
+
+**Bartosz**: I work with Spark, so I configure the pipeline externally and switch between production and test environments. I’m not aware of tools for every type of pipeline, but Spark works for me. ([15:17](https://www.youtube.com/watch?v=BP6w_vKySN0&t=917s))
+
+**Alexey**: At my previous company, we used SQL queries, which were harder to test. We used tools like Great Expectations and Soda to define checks and run them after each pipeline step. These checks included things like the number of columns or ensuring no null values. ([15:49](https://www.youtube.com/watch?v=BP6w_vKySN0&t=949s))
+
+**Bartosz**: Those are basic tests. If you’re doing a join and missing columns, you can catch errors. Great Expectations is one tool for this. For SQL, you can use templating to replace table names with test tables. ([16:33](https://www.youtube.com/watch?v=BP6w_vKySN0&t=993s))
+
+### Choosing Spark for data engineering projects
+
+**Alexey**: Would you recommend Spark for new projects, or would you choose something else? ([17:10](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1030s))
+
+**Bartosz**: I’d use Spark because I’m familiar with it. If your team knows Spark, it’s still a great tool. If not, there are many tutorials to learn from. Spark is here to stay, at least for some time. ([17:18](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1038s))
+
+**Alexey**: In our data engineering course, we still teach Spark. Companies still use it, but I wonder if it’s chosen for new projects. Sometimes, it’s easier to write SQL queries and run them on BigQuery or Snowflake. ([17:41](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1061s))
+
+**Bartosz**: At a previous company, we built an MLOps platform and used Spark for processing logs. It was a new project, and even though most developers had no Spark experience, it was still the easiest solution. ([18:08](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1088s))
+
+**Alexey**: We’ve talked a lot about data engineering. Now, let’s talk about AI. How is data engineering connected to AI tools and LLMs? ([18:38](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1118s))
+
+### The connection between data engineering and AI tools
+
+**Bartosz**: First, you can use AI in your pipeline, but it might not be the smartest idea because of hallucinations. You’ll have many bugs to fix. Another connection is fine-tuning models. You need a lot of data, and data engineers preprocess it. Even if you’re doing backend work, you’ll have logs to analyze. Data engineers are always needed, though the scale varies. ([19:05](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1145s))
+
+**Alexey**: I was also curious about your journey. How did you switch from data engineering to focusing more on AI? Was it something you liked, or was it something you needed to work on and learn? How did it happen for you? ([20:18](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1218s))
+
+**Bartosz**: I wanted to switch to data science from backend engineering but ended up in data engineering. Still, I wanted to do some machine learning, so I was kind of in between those two areas. Then, I moved into MLOps, which was what I wanted to do. It combined data engineering, machine learning, and some backend work I was familiar with. ([20:36](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1236s))
+
+**Alexey**: So, it was passion-driven? You wanted to do it, saw the opportunity, and thought, “This is something I want to try”? ([21:01](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1261s))
+
+**Bartosz**: Yes, you could say that. I was also not very satisfied with backend engineering anymore, so I wanted to try something new. ([21:14](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1274s))
+
+### Use cases of AI in data engineering and MLOps
+
+**Alexey**: Can you tell us about some use cases of AI that you’ve worked on? ([21:39](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1299s))
+
+**Bartosz**: Of course, the typical use case is augmented generation. You have a database, and you use AI to generate content. But I think the most interesting use cases are when you don’t even see that AI is involved. For example, I worked on a project where we analyzed Google reviews for a company. The goal was to find out what worked and what didn’t at specific locations and generate a report. ([21:46](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1306s))
+
+**Bartosz**: The AI was used in the background to analyze the data, but it wasn’t presented to the user as an AI feature. There was no “Summarize with AI” button. It just made the report more useful. I think this is the most useful way to use AI—don’t show everyone you’re using it, just make the product better. ([21:46](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1306s))
+
+**Alexey**: But marketing-wise, if you show people you use AI, it’s easier to attract investment and users. ([23:25](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1405s))
+
+**Bartosz**: It might be easier to attract investment, but is it easier to attract users? There are two camps: people who love everything with AI and people who absolutely hate it. ([23:36](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1416s))
+
+**Alexey**: I live in Berlin, and now when I take the subway, I see banners like “Samsung with AI.” Everything needs AI now, apparently. ([23:48](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1428s))
+
+**Bartosz**: But do users need it? They might need it, but do they need to know they’re using it? ([24:02](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1442s))
+
+**Alexey**: Machine learning models have been around in mobile phones for quite some time, right? ([24:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1452s))
+
+**Bartosz**: Exactly. If you’re using an app where you can type something to search for pictures, that’s using machine learning to recognize what’s in the picture. But you don’t have to tell people it’s AI. It’s just a feature that works. ([24:21](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1461s))
+
+**Alexey**: Google does advertise their cameras with AI. I guess their marketing department knows what they’re doing. ([24:40](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1480s))
+
+**Bartosz**: Probably. But saying something is built with AI is like saying it was built with Spark. It’s just supposed to work. ([24:52](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1492s))
+
+### Prompt engineering techniques and best practices
+
+**Alexey**: You’ve written a lot of posts—480, you said. One of them was about prompt engineering. Can you tell us more about the content of that post and what exactly makes a good prompt? ([25:13](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1513s))
+
+**Bartosz**: It depends on the model, but there are a few things that almost always work. One is called in-context learning, which is a fancy name for giving the model examples. This works because you’re showing the model what’s supposed to happen in a similar case, so it can imitate the response. ([25:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1527s))
+
+**Bartosz**: This is especially useful if you need a specific format, like JSON with certain keys. Another technique is chain-of-thought prompting, but with reasoning models, it’s often built-in now. ([25:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1527s))
+
+**Bartosz**: There are also prompting tricks, like saying “step by step” or offering a tip like “$100 for doing it right.” These are more like hacks that might work once for a specific model. ([25:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1527s))
+
+**Bartosz**: Proper prompt engineering is more about providing examples and explaining how things are supposed to happen. This works for all models, though some might perform better than others. ([25:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1527s))
+
+**Alexey**: Is prompt engineering becoming less important for models like GPT-4 compared to GPT-3.5? GPT-3.5 was good but not as good as GPT-4, so we needed to spend more time crafting prompts. Now, it feels like GPT-4 just gets it. ([27:23](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1643s))
+
+**Bartosz**: It gets it, but if it doesn’t, you can either describe it in detail or provide an example. Examples work better. This is the in-context learning technique, which is essentially prompt engineering. We just gave it a fancy name. ([27:45](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1665s))
+
+**Alexey**: Can you give us an example of how to provide an example? ([28:09](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1689s))
+
+**Bartosz**: Sure. Let’s say you’re analyzing the sentiment of a sentence. You have one review that’s positive and another that’s negative. You need the output in a specific format, like JSON. ([28:16](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1696s))
+
+**Bartosz**: You can either explain, “Give me valid JSON with this key,” or you can provide an example of a review and the corresponding JSON output. The model will follow the format even if you don’t explicitly say, “I need JSON with this key.” ([28:16](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1696s))
+
+**Alexey**: But the bigger the prompt, the more money we pay. How many examples should we include? For sentiment analysis, is it enough to include one positive and one negative example? Or do we need more? If we do this at scale, including more examples in the prompt could become expensive. ([29:33](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1773s))
+
+**Bartosz**: Yes, and that’s why I would recommend testing—or rather, gathering data from tests. You prepare an evaluation dataset with inputs and expected outputs, then measure how well the model performs. At some point, when you keep adding examples, the results will stop improving, so you can stop there. ([30:00](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1800s))
+
+**Bartosz**: I recently discovered a part of AI engineering called prompt compression. Apparently, you can remove some tokens from the prompt, and the model will still perform the same. I can’t explain it yet because I’m still reading about it, but it’s interesting. ([30:00](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1800s))
+
+**Alexey**: Is it related to prompt caching? I don’t know how it works internally, but— ([30:59](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1859s))
+
+**Bartosz**: I think it’s not related. In prompt compression, you create a different prompt that’s shorter but supposed to do the same thing. It’s about creating an equivalent prompt with fewer tokens, possibly dropping parts of the words or something like that. ([31:04](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1864s))
+
+### Prompt compression and caching in AI models
+
+**Alexey**: So, it’s like asking ChatGPT, “Hey, I have this prompt. Can you rewrite it to make it shorter but not lose any meaningful parts?” ([31:39](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1899s))
+
+**Bartosz**: Maybe. I don’t know how it works internally yet, but I imagine it might be something like that. ([31:45](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1905s))
+
+**Alexey**: I don’t know how prompt caching works either, but I know that Anthropic’s models, like Claude, have it. It makes coding tasks cheaper because you don’t send the entire codebase every time. For example, with Codex, they cache part of the prompt, so you pay less. ([31:52](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1912s))
+
+**Bartosz**: I think I read something about OpenAI’s documentation where they cache the attention matrix values. You don’t need to calculate it every time. But maybe I’m mixing things up. ([32:43](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1963s))
+
+**Alexey**: I imagine if two prompts have the same beginning but different endings, you can cache the shared part and only process the differences. ([33:03](https://www.youtube.com/watch?v=BP6w_vKySN0&t=1983s))
+
+**Bartosz**: I think that’s the case, but if anyone wants to learn how it works, they should check the documentation, not rely on us trying to recall it. ([33:29](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2009s))
+
+### Thoughts on DeepSeek and open-source AI models
+
+**Alexey**: What do you think about DeepSeek? Have you played with it? ([33:35](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2015s))
+
+**Bartosz**: Only in the Perplexity tool as one of the models. I like that there are many new open-source models. It’s good for everyone. I also like that models are being created outside the United States. One location having a monopoly is never good. ([33:42](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2022s))
+
+**Bartosz**: Overall, I’m enthusiastic about it. When I use it in Perplexity, it works really well. ([33:42](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2022s))
+
+**Alexey**: You haven’t used it in any projects yet? ([34:23](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2063s))
+
+**Alexey**: Bartosz ([34:23](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2063s))
+
+**Alexey**: No, I haven’t used it in any projects. I only use it as a user of the tool, and I’m satisfied with the results. ([34:23](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2063s))
+
+**Alexey**: I haven’t tried Perplexity yet, but I’ve heard it’s good. ([34:37](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2077s))
+
+**Bartosz**: Sometimes it makes silly mistakes, like quoting something that doesn’t exist or using Reddit as an authoritative source. But overall, it’s fine. You just have to check if the information it gives you is true, especially for important things. ([34:46](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2086s))
+
+**Bartosz**: If it’s something like code, you can test it quickly. But for security-related things, you should always double-check. ([34:46](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2086s))
+
+**Alexey**: Overall, it’s helpful, right? ([35:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2147s))
+
+**Alexey**: Bartosz ([35:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2147s))
+
+**Alexey**: Yes, overall, it’s helpful. ([35:47](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2147s))
+
+### Using AI for lead classification and LinkedIn automation
+
+**Alexey**: Another article you wrote is about using AI for lead classification on LinkedIn, where you created a Chrome extension. Can you tell us more about this project? ([35:54](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2154s))
+
+**Bartosz**: The goal was to send personalized invitations on LinkedIn. I was writing them manually, not generating them. The process involved opening someone’s profile, checking their posts, visiting their website if they had one, and reading their blog if they were active. ([36:06](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2166s))
+
+**Bartosz**: This method worked but took a lot of time. The idea behind the extension was to automate some of these steps. It would analyze the profile and website data using AI and add the profile to a list if it was worth reaching out to. ([36:06](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2166s))
+
+**Alexey**: Was this for personal connections? ([36:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2211s))
+
+**Alexey**: Bartosz ([36:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2211s))
+
+**Alexey**: Yes, it was for personal connections. The extension helped filter out profiles that weren’t worth the effort, like those with outdated websites or no recent activity. ([36:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2211s))
+
+**Alexey**: It depends. I receive many requests daily, so a personalized message might make a difference. But for people who don’t get many requests, it might not matter. ([38:11](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2291s))
+
+**Bartosz**: Yes, you could check if someone is posting about topics related to what you’re selling. For example, if you’re selling AI monitoring tools, you’d want to target people working with AI, not someone selling shoes. ([38:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2331s))
+
+**Alexey**: Every person on LinkedIn is a potential lead. You can assess how qualified they are, whether they have the problem your product solves, and if they’re in the right domain. ([39:28](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2368s))
+
+**Bartosz**: Exactly. If you look at LinkedIn’s Sales Navigator, it has similar features, but it’s disappointing. ([40:00](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2400s))
+
+**Alexey**: I remember it costs around 100 EUR per month. It’s not cheap. ([40:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2412s))
+
+**Bartosz**: Yes, it’s not cheap. Whether it’s useful is debatable. ([40:19](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2419s))
+
+**Alexey**: I tried using it for two months and found that sending personalized connection requests works as well as Sales Navigator, if not better. ([40:26](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2426s))
+
+**Bartosz**: The best feature is filtering out profiles you’ve already visited. That’s useful, but it’s not the main selling point. ([40:41](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2441s))
+
+**Alexey**: If someone wants to learn how to build a Chrome extension and include AI, how should they start? ([40:54](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2454s))
+
+### Building Chrome extensions with AI integration
+
+**Bartosz**: I had a backend service that the Chrome extension called. I didn’t put the AI inside the extension because I wasn’t familiar with browser extensions. I kept it simple and put most of the logic in the backend. ([41:04](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2464s))
+
+**Bartosz**: I used the Cursor editor, and a lot of the code was generated. It didn’t always work, but it was faster than writing everything myself. ([41:04](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2464s))
+
+**Alexey**: Do you still use Cursor? ([42:05](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2525s))
+
+**Alexey**: Bartosz ([42:05](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2525s))
+
+**Alexey**: Yes, I still use it as a paid product. ([42:05](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2525s))
+
+**Alexey**: Would you recommend it to others? ([42:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2532s))
+
+**Alexey**: Bartosz ([42:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2532s))
+
+**Alexey**: If someone is coding at work and can use it, definitely. If it’s for personal use, maybe start with the free version. ([42:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2532s))
+
+**Alexey**: It’s not going to generate an entire application from one prompt, but it helps a lot with smaller functions. If you write the function signature and docstring, it can generate the rest. ([42:12](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2532s))
+
+### Comparing Cursor and GitHub Copilot for coding
+
+**Alexey**: Have you compared Cursor with GitHub Copilot? ([43:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2631s))
+
+**Bartosz**: I used GitHub Copilot when it first came out. It was great at the time, but Cursor is much better now. I haven’t compared the latest versions, but I’m sticking with Cursor because I already pay for it. ([43:57](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2637s))
+
+**Alexey**: I already pay for ChatGPT, Claude, and GitHub Copilot (free for open-source contributors). I’m wondering if I should switch to Cursor, but I’d have to cancel one of my existing subscriptions. ([44:38](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2678s))
+
+**Bartosz**: You don’t have to copy with Cursor. It can reference files directly, which speeds up development. There’s also a composer tool that can edit multiple files or even run command-line commands. ([45:24](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2724s))
+
+**Alexey**: There are so many alternatives, like P AI (an open-source alternative to Cursor). New tools appear every day. I’ve decided to stick with Cursor unless something significantly better comes along. ([46:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2787s))
+
+### Using ChatGPT and Perplexity for AI-assisted tasks
+
+**Bartosz**: Sometimes, but I use Perplexity more often. You can switch off the search feature and use it like ChatGPT. ([47:19](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2839s))
+
+**Alexey**: Have you tried other tools like P AI, Bolt, or Lavable? ([47:50](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2870s))
+
+**Bartosz**: I started using Cursor early and stuck with it. ([48:09](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2889s))
+
+**Alexey**: So, Cursor is your go-to tool for programming? ([48:17](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2897s))
+
+**Alexey**: Bartosz ([48:17](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2897s))
+
+**Alexey**: Yes, right now. I don’t even miss the refactoring features from IntelliJ anymore. ([48:17](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2897s))
+
+**Alexey**: JetBrains is trying to catch up with their AI plugin, but you’d have to pay extra for it. ([48:30](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2910s))
+
+**Alexey**: Bartosz ([48:30](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2910s))
+
+**Alexey**: Exactly. I already pay for Cursor, so I’m not switching unless something is way better. ([48:30](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2910s))
+
+**Alexey**: I guess you’re used to Visual Studio Code by now. ([48:58](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2938s))
+
+**Alexey**: Bartosz ([48:58](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2938s))
+
+**Alexey**: Yes, but I miss some of the automatic refactoring features from IntelliJ. ([48:58](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2938s))
+
+**Alexey**: Comparing IntelliJ for Java isn’t fair because Java is a static language, and Python is dynamic. ([49:36](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2976s))
+
+**Alexey**: Bartosz ([49:36](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2976s))
+
+**Alexey**: True, but Visual Studio Code doesn’t even try to match IntelliJ’s refactoring capabilities. ([49:36](https://www.youtube.com/watch?v=BP6w_vKySN0&t=2976s))
+
+**Alexey**: I’ve tried GitHub Copilot for refactoring, like extracting functions, and it works well. ([50:03](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3003s))
+
+**Alexey**: Bartosz ([50:03](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3003s))
+
+**Alexey**: Cursor does the same. You don’t have to remember everything in the standard library anymore, which is a big improvement. ([50:03](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3003s))
+
+**Alexey**: I know a bit of frontend development, but the ecosystem evolves quickly. With these tools, I can give a prompt and get a working project, but I don’t always understand what’s happening. ([50:56](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3056s))
+
+**Alexey**: Bartosz ([50:56](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3056s))
+
+**Alexey**: That’s one of the problems, but it works. I can’t do frontend development, but with Cursor, I can create something. It’s ugly, but it’s better than nothing. ([50:56](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3056s))
+
+### Hosting static websites and using AI for development
+
+**Alexey**: What do you use for your website? ([52:09](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3129s))
+
+**Alexey**: Bartosz ([52:09](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3129s))
+
+**Alexey**: It’s a static site generator hosted on GitHub Pages. ([52:09](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3129s))
+
+**Alexey**: In AWS, you can put your files in S3 and attach a domain to the bucket. ([52:40](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3160s))
+
+**Alexey**: Bartosz ([52:40](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3160s))
+
+**Alexey**: There’s a service that downloads the code from GitHub, builds a Docker image, and deploys it. ([52:40](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3160s))
+
+**Alexey**: I want to start writing and get motivated. Does your blog help you find clients? ([53:10](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3190s))
+
+**Alexey**: Bartosz ([53:10](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3190s))
+
+**Alexey**: Yes, a few people reached out after finding my email on the blog. It also helps when teaching workshops. Sending links to my articles makes a good impression. ([53:10](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3190s))
+
+**Alexey**: I started blogging because I had a lot of ideas about programming and wanted to share them. Over time, it evolved into a tool to attract clients. ([53:10](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3190s))
+
+### How blogging helps attract clients and share knowledge
+
+**Alexey**: Now you work as an AI consultant, right? ([54:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3267s))
+
+**Alexey**: Bartosz ([54:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3267s))
+
+**Alexey**: Yes, that’s correct. The blog’s topics evolved to AI, and it became a tool to attract clients. ([54:27](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3267s))
+
+**Alexey**: So, you didn’t start with the goal of attracting clients, but it evolved into that. ([54:48](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3288s))
+
+**Bartosz**: Yes, exactly. At the beginning, the goal was to write down some ideas and maybe send links to a few people, mostly for my own team. Over time, it evolved. ([54:53](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3293s))
+
+**Bartosz**: For a while, it was a tool for learning. I was learning about data science, so I wrote a lot of articles about it. They were essentially notes for myself. Eventually, it became more than that. ([54:53](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3293s))
+
+**Bartosz**: It wasn’t a marketing tool from the start, and it still isn’t entirely. A lot of the content is just notes I can copy-paste into projects. ([54:53](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3293s))
+
+**Alexey**: For that, I used to use WikiMedia. I had my own instance of a wiki, but the problem was it wasn’t presentable for others. It was just a bunch of thoughts, helpful for copy-pasting but not something I could show to clients to impress them. ([55:39](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3339s))
+
+**Alexey**: It’s also not very discoverable on Google. A blog works better for that. ([55:39](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3339s))
+
+**Bartosz**: If you have your notes in the form of articles, it’s relatively easy to turn them into a blog. ([56:09](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3369s))
+
+**Alexey**: With AI tools, you can turn drafty notes into blog posts relatively quickly. It’s a nice weekend project. ([56:17](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3377s))
+
+**Bartosz**: The problem is, I’ve never succeeded at making AI write in a style I’d like to present as my own. ([56:39](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3399s))
+
+**Alexey**: I managed to do it with LinkedIn recommendations. When I left my previous company, I wanted to write recommendations for my colleagues. I wrote bullet points and asked AI to write in the same style as my other recommendations. It did a decent job, though I still had to edit it a bit. ([56:54](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3414s))
+
+**Alexey**: For long-form content, though, it doesn’t work as well. ([56:54](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3414s))
+
+**Bartosz**: I tried publishing an AI-generated article on my blog. It was about generating articles with AI, so it wasn’t cheating—it was a tutorial. It was okay, but if someone reads a lot of my content, they’d notice it wasn’t written by me. ([57:36](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3456s))
+
+### Using AI to assist with writing and content creation
+
+**Alexey**: Do you use ChatGPT to help you get started with articles? ([58:15](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3495s))
+
+**Bartosz**: Not to get started, but when I get stuck or need to rewrite something, yes. I tend to write long sentences, which aren’t good for readers. If I’m stuck on how to split a sentence, I ask ChatGPT for examples. ([58:22](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3502s))
+
+**Alexey**: For me, ChatGPT eliminates the blank page problem. I can dump my thoughts into it, and it structures them, giving me a starting point. ([58:57](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3537s))
+
+**Bartosz**: When I want to write freely, I use the simplest editor I have. I don’t want anything finishing my sentences. Most editors try to do that now, but Obsidian doesn’t. ([59:25](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3565s))
+
+**Alexey**: You could probably add a plugin to Obsidian for that, but I wouldn’t. Google Docs also has this feature, but you can disable it. ([59:48](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3588s))
+
+**Bartosz**: Yes, but then you have to remember to enable it again. I just switch to a different editor when I want to write something imperfect but exactly what I want. ([1:00:00](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3600s))
+
+**Alexey**: It’s been over an hour. Time flies! I think we should wrap up. It was amazing talking to you, Bartosz. Thanks for joining us today and sharing your experiences. ([1:00:21](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3621s))
+
+**Bartosz**: I invite everyone to visit my blog. You might find something useful there. You don’t need to subscribe to the newsletter, but you’re welcome to if you like. ([1:00:51](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3651s))
+
+**Alexey**: I’ll put the link to your blog in the live chat. Thanks a lot, Bartosz. Enjoy your evening—it’s almost 9:00 PM for you, right? ([1:01:17](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3677s))
+
+**Bartosz**: Yes, almost 9:00 PM. ([1:01:29](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3689s))
+
+**Alexey**: Have a good evening, and see you around! ([1:01:37](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3697s))
+
+**Alexey**: Bartosz ([1:01:37](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3697s))
+
+**Alexey**: Bye, everyone! ([1:01:37](https://www.youtube.com/watch?v=BP6w_vKySN0&t=3697s))
