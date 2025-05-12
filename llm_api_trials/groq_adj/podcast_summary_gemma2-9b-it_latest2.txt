@@ -1,0 +1,17 @@
+## Data & the Cloud: Optimizing Cost with Eddy
+
+This episode explores the intersection of data engineering, cloud optimization, and FinOps strategies with Eddy, a Staff Data Engineer at Kinaxis. 
+
+*  Eddy's Career Transformation:  From Supply Chain to Data
+*  Bridging Physical & Digital Warehousing: Key Differences 📦➡️☁️
+*  Unlocking FinOps: Cloud Cost Optimization & More
+*  Data Engineering Tools for the Cloud: Excel to Docker 💻
+*  Building a Data Platform for FinOps Efficiency
+
+* Data drives cloud cost optimization through insights and performance evaluation. 📈
+* FinOps emphasizes using cloud services effectively and cost-consciously. 💰
+* The Data Engineering Zoom Camp provides a solid foundation in cloud tools. 🎓
+* Eddy's journey highlights how data skills can transition across industries. 🇮🇹
+*  Understanding cloud architecture and data is crucial for FinOps success. 🏛️
+* Open source tools like tagging software are essential for cloud cost management. 🛠️
+* Collaboration between data engineers and business teams is vital in FinOps. 🤝
