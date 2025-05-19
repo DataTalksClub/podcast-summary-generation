@@ -21,7 +21,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 # ---- Set your API key securely ----
-os.environ["GROQ_API_KEY"] = "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" #insert API key here
+os.environ["GROQ_API_KEY"] = "" #insert API key here
 API_KEY = os.getenv("GROQ_API_KEY")
 
 if not API_KEY:
