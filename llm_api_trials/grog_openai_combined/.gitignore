@@ -1,0 +1,3 @@
+secrets/.env
+*.md
+__pycache__/

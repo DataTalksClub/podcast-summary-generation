@@ -1,0 +1,5 @@
+groq
+openai
+scikit-learn
+textstat
+python-dotenv
