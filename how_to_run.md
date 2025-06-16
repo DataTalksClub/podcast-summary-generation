@@ -1,0 +1,1 @@
+ python grog_openai_combined\main.py  --input episode.md --output episode_summary.md
