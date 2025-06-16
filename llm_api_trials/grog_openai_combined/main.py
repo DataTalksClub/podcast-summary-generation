@@ -5,7 +5,7 @@ from utils.evaluation import evaluate_summary
 
 def main():
     input_path = "s20e06-from-supply-chain-management-to-digital-warehousing-and-finops.md"
-    output_path = "summary_groq.md"
+    output_path = "summary_groq_6_16_2024.md"
 
     podcast_text = load_text(input_path)
 

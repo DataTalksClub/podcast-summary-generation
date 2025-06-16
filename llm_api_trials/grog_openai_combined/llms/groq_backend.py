@@ -12,7 +12,8 @@ class GroqLLM(LLMInterface):
         if not api_key:
             raise ValueError("GROQ_API_KEY not found in environment.")
         self.client = Groq(api_key=api_key)
-        self.model = "llama-3.3-70b-versatile"
+        #self.model = "llama-3.3-70b-versatile"
+        self.model = "llama-3.1-8b-instant"
 
     def summarize(self, text: str) -> str:
         prompt = build_prompt(text)
