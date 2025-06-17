@@ -27,7 +27,7 @@ This project aims to generate structured **PDF reports** from podcast interviews
 docker-compose up -d
 
 # Run the application
-python main.py
+ python main_openai.py  --input episode.md --output episode_summary_openai.md
 ```
 
 ## 🔄 Workflow Pipeline

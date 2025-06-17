@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from llms.base import LLMInterface
 from pipeline.prompt_template import build_prompt
 
-load_dotenv(dotenv_path="secrets/.env")
+load_dotenv()
 
 class GroqLLM(LLMInterface):
     def __init__(self):
