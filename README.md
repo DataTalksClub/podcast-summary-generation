@@ -26,8 +26,11 @@ This project aims to generate structured **PDF reports** from podcast interviews
 # Start the backend services (if needed)
 docker-compose up -d
 
-# Run the application
+# Generate a podcast summary using the OpenAI API key.
  python main_openai.py  --input episode.md --output episode_summary_openai.md
+
+# Run the application
+python run_streamlit_app.py
 ```
 
 ## 🔄 Workflow Pipeline
