@@ -30,6 +30,11 @@ selected_llm_platform = st.selectbox(
 )
 
 st.write(f"You selected: {selected_llm_platform}")
+input_api_key = st.text_input(
+    "Enter your API key (if required):",
+    type="password",
+    help="An API Key for the relevant model. If this is empty, an attempt will be made to detect the API keys (OPEN_API_KEY, GROK_API_KEY) from the environmental variables",
+)
 summary = None
 
 if uploaded_file is not None:
@@ -46,11 +51,11 @@ if uploaded_file is not None:
 
         if selected_llm_platform == "OpenAI":
             # Use your LLM summarization pipeline
-            LLM = OpenAILLM(api_key=st.secrets.get("OPENAI_API_KEY"))
+            LLM = OpenAILLM(api_key=input_api_key or st.secrets.get("OPENAI_API_KEY"))
 
         elif selected_llm_platform == "Grok":
             # Use your LLM summarization pipeline
-            LLM = GroqLLM(api_key=st.secrets.get("GROK_API_KEY"))
+            LLM = GroqLLM(api_key=input_api_key or st.secrets.get("GROK_API_KEY"))
 
         summary, _ = summarize_podcast_full(LLM, original_text)
         # Save summary to a temporary file
