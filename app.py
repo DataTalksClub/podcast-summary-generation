@@ -31,7 +31,7 @@ selected_llm_platform = st.selectbox(
 
 st.write(f"You selected: {selected_llm_platform}")
 input_api_key = st.text_input(
-    "Enter your API key (if required):",
+    "Enter your API key (Optional):",
     type="password",
     help="An API Key for the relevant model. If this is empty, an attempt will be made to detect the API keys (OPEN_API_KEY, GROK_API_KEY) from the environmental variables",
 )
