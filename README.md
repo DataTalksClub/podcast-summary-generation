@@ -21,7 +21,32 @@ This project aims to generate structured **PDF reports** from podcast interviews
    pip install -r requirements.txt
    ```
 
+Before running the application, ensure you have your `OPEN_API_KEY` and `GROK_API_KEY` configured.
+
+You can do this using **either** of the following methods:
+
+#### Option 1: Use a `.env` File
+
+Create a `.env` file in the root of your project with the following content:
+
+```env
+OPEN_API_KEY = sample-value-here
+GROK_API_KEY = sample-value-here
+```
+
+#### Option 2: Use a `secrets.toml` File
+
+Create a file named `secrets.toml` inside the `.streamlit` folder with the following content:
+
+```bash
+OPEN_API_KEY = sample-value-here
+GROK_API_KEY = sample-value-here
+```
+
 ### **2️⃣ Run the Project (Development Mode)**
+
+To run the application, do the following:
+
 ```bash
 # Start the backend services (if needed)
 docker-compose up -d
@@ -29,7 +54,7 @@ docker-compose up -d
 # Generate a podcast summary using the OpenAI API key.
  python main_openai.py  --input episode.md --output episode_summary_openai.md
 
-# Run the application
+# Run the Streamlit application
 python run_streamlit_app.py
 ```
 
