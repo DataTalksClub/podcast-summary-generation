@@ -40,7 +40,7 @@ GROK_API_KEY = sample-value-here
 
 #### Option 3: Use a `.streamlit/secrets.toml` File
 
-Create a file named `secrets.toml` inside the `.streamlit` (please create the directory if it does not exists) folder with the following content:
+Create a file named `secrets.toml` inside the `.streamlit` (please create the directory if it does not exist) folder with the following content:
 
 ```bash
 OPEN_API_KEY = sample-value-here
