@@ -23,7 +23,7 @@ This project aims to generate structured **PDF reports** from podcast interviews
 
 Before running the application, ensure you have your `OPEN_API_KEY` or `GROK_API_KEY` configured.
 
-You can configure your API keys this using **one** of the following methods:
+You can configure your API keys using **one** of the following methods:
 
 #### Option 1: Passing it via the UI (Recommended)
 
