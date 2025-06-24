@@ -21,11 +21,15 @@ This project aims to generate structured **PDF reports** from podcast interviews
    pip install -r requirements.txt
    ```
 
-Before running the application, ensure you have your `OPEN_API_KEY` and `GROK_API_KEY` configured.
+Before running the application, ensure you have your `OPEN_API_KEY` or `GROK_API_KEY` configured.
 
-You can do this using **either** of the following methods:
+You can configure your API keys this using **one** of the following methods:
 
-#### Option 1: Use a `.env` File
+#### Option 1: Passing it via the UI (Recommended)
+
+Paste your API key directly into the designated input field, `Enter your API key (Optional)` in the user interface.
+
+#### Option 2: Use a `.env` File
 
 Create a `.env` file in the root of your project with the following content:
 
@@ -34,7 +38,7 @@ OPEN_API_KEY = sample-value-here
 GROK_API_KEY = sample-value-here
 ```
 
-#### Option 2: Use a `secrets.toml` File
+#### Option 3: Use a `secrets.toml` File
 
 Create a file named `secrets.toml` inside the `.streamlit` folder with the following content:
 
@@ -42,6 +46,8 @@ Create a file named `secrets.toml` inside the `.streamlit` folder with the follo
 OPEN_API_KEY = sample-value-here
 GROK_API_KEY = sample-value-here
 ```
+
+**Note**: If no API key is provided, the app will automatically attempt to retrieve it from the environment variables.
 
 ### **2️⃣ Run the Project (Development Mode)**
 
