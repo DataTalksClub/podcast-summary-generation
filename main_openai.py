@@ -1,5 +1,5 @@
 import argparse
-from llms.groq_backend import GroqLLM
+from llms.openai_backend import OpenAILLM
 from pipeline.summarizer import summarize_podcast_full
 from utils.io_utils import load_text, save_text
 from utils.evaluation import evaluate_summary
@@ -17,7 +17,7 @@ def main():
     podcast_text = load_text(args.input)
 
     # Generate the summary
-    llm = GroqLLM()
+    llm = OpenAILLM()
     summary, _ = summarize_podcast_full(llm, podcast_text)
 
     # Save the summary as Markdown
