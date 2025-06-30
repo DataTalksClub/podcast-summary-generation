@@ -89,9 +89,10 @@ if st.session_state.get("summary_ready", False):
     st.subheader("Summary")
     st.markdown(st.session_state["summary_content"])
 
-    st.subheader("Evaluation Metrics")
-    for key, value in st.session_state["metrics"].items():
-        st.write(f"{key}: {value}")
+    # Metrics are computed but not shown
+    # st.subheader("Evaluation Metrics")
+    # for key, value in st.session_state["metrics"].items():
+    #     st.write(f"{key}: {value}")
 
     with open(st.session_state["download_path"], "rb") as f:
         st.download_button(
