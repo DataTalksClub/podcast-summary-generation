@@ -22,6 +22,14 @@ LLM_PLATFORMS = [
 st.set_page_config(page_title="Podcast Summarizer", layout="wide")
 st.title("Podcast Summarizer")
 
+# Initialize session state variables
+if "processing_summary" not in st.session_state:
+    st.session_state.processing_summary = False
+if "summary_ready" not in st.session_state:
+    st.session_state.summary_ready = False
+if "user_api_key" not in st.session_state:
+    st.session_state.user_api_key = ""
+
 uploaded_file = st.file_uploader("Upload your podcast transcript (.md)", type=["md"])
 
 selected_llm_platform = st.selectbox(
@@ -32,25 +40,42 @@ selected_llm_platform = st.selectbox(
 
 st.write(f"You selected: {selected_llm_platform}")
 
-input_api_key = st.text_input(
-    "Enter your API key (Optional):",
-    type="password",
-    help="API Key for the model. If left blank, we'll try both `.env` and `secrets.toml` for keys.",
-)
-
-# Initialize session state
-if "processing_summary" not in st.session_state:
-    st.session_state.processing_summary = False
-if "summary_ready" not in st.session_state:
-    st.session_state.summary_ready = False
-
 
 def get_env_or_secret(key: str) -> str:
-    """Try to get key from st.secrets, else from environment variables."""
-    val = st.secrets.get(key) if hasattr(st, "secrets") else None
-    if val:
-        return val
+    try:
+        val = st.secrets.get(key)
+        if val:
+            return val
+    except Exception:
+        # If secrets.toml not found or key missing, ignore error silently
+        pass
     return os.getenv(key, "")
+
+
+def get_relevant_api_key_env_name() -> str:
+    if selected_llm_platform == "OpenAI":
+        return "OPENAI_API_KEY"
+    elif selected_llm_platform == "Grok":
+        return "GROQ_API_KEY"
+    else:
+        return ""
+
+
+api_key_env_name = get_relevant_api_key_env_name()
+
+input_api_key = st.text_input(
+    f"Enter your {selected_llm_platform} API key:",
+    type="password",
+    value=st.session_state.user_api_key,
+    help=f"API Key for {selected_llm_platform}. If left blank, we'll try to read {api_key_env_name} from `.env` or `secrets.toml`.",
+)
+
+# Persist user input in session state
+st.session_state.user_api_key = input_api_key
+
+
+def api_key_available() -> bool:
+    return bool(input_api_key or get_env_or_secret(api_key_env_name))
 
 
 def summarize_and_display():
@@ -63,10 +88,20 @@ def summarize_and_display():
     with st.spinner("Summarizing... please wait."):
         original_text = load_text(tmp_input_path)
 
+        api_key_to_use = input_api_key or get_env_or_secret(api_key_env_name)
+        if not api_key_to_use:
+            st.warning(f"API key for {selected_llm_platform} is missing. Please enter it above.")
+            st.session_state.processing_summary = False
+            return
+
         if selected_llm_platform == "OpenAI":
-            LLM = OpenAILLM(api_key=input_api_key or get_env_or_secret("OPENAI_API_KEY"))
+            LLM = OpenAILLM(api_key=api_key_to_use)
         elif selected_llm_platform == "Grok":
-            LLM = GroqLLM(api_key=input_api_key or get_env_or_secret("GROK_API_KEY"))
+            LLM = GroqLLM(api_key=api_key_to_use)
+        else:
+            st.error(f"Unsupported LLM platform: {selected_llm_platform}")
+            st.session_state.processing_summary = False
+            return
 
         summary, _ = summarize_podcast_full(LLM, original_text)
 
@@ -85,21 +120,25 @@ def summarize_and_display():
     st.session_state.processing_summary = False
 
 
-if uploaded_file is not None:
+if uploaded_file is None:
+    st.info("Please upload a podcast transcript (.md file) to get started.")
+elif not api_key_available():
+    st.info(f"Please enter your API key for {selected_llm_platform} above to enable summarization.")
+else:
     st.success("Transcript uploaded successfully. Click 'Summarize' to proceed.")
 
-    st.button(
-        "Summarize",
-        key="summarize_button",
-        on_click=summarize_and_display,
-        disabled=st.session_state.processing_summary,
-    )
+st.button(
+    "Summarize",
+    key="summarize_button",
+    on_click=summarize_and_display,
+    disabled=st.session_state.processing_summary or not api_key_available() or uploaded_file is None,
+)
 
 if st.session_state.get("summary_ready", False):
     st.subheader("Summary")
     st.markdown(st.session_state["summary_content"])
 
-    # Metrics are computed but not shown
+    # Uncomment below if you want to show evaluation metrics
     # st.subheader("Evaluation Metrics")
     # for key, value in st.session_state["metrics"].items():
     #     st.write(f"{key}: {value}")
