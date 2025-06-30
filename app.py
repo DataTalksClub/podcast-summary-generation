@@ -2,6 +2,8 @@ import os
 import tempfile
 
 import streamlit as st
+from dotenv import load_dotenv
+load_dotenv()
 
 from llms.base import LLMInterface
 from llms.groq_backend import GroqLLM
@@ -33,7 +35,7 @@ st.write(f"You selected: {selected_llm_platform}")
 input_api_key = st.text_input(
     "Enter your API key (Optional):",
     type="password",
-    help="An API Key for the relevant model. If this is empty, an attempt will be made to detect the API keys (OPEN_API_KEY, GROK_API_KEY) from the environmental variables",
+    help="API Key for the model. If left blank, we'll try both `.env` and `secrets.toml` for keys.",
 )
 
 # Initialize session state
@@ -41,6 +43,14 @@ if "processing_summary" not in st.session_state:
     st.session_state.processing_summary = False
 if "summary_ready" not in st.session_state:
     st.session_state.summary_ready = False
+
+
+def get_env_or_secret(key: str) -> str:
+    """Try to get key from st.secrets, else from environment variables."""
+    val = st.secrets.get(key) if hasattr(st, "secrets") else None
+    if val:
+        return val
+    return os.getenv(key, "")
 
 
 def summarize_and_display():
@@ -54,9 +64,9 @@ def summarize_and_display():
         original_text = load_text(tmp_input_path)
 
         if selected_llm_platform == "OpenAI":
-            LLM = OpenAILLM(api_key=input_api_key or st.secrets.get("OPENAI_API_KEY"))
+            LLM = OpenAILLM(api_key=input_api_key or get_env_or_secret("OPENAI_API_KEY"))
         elif selected_llm_platform == "Grok":
-            LLM = GroqLLM(api_key=input_api_key or st.secrets.get("GROK_API_KEY"))
+            LLM = GroqLLM(api_key=input_api_key or get_env_or_secret("GROK_API_KEY"))
 
         summary, _ = summarize_podcast_full(LLM, original_text)
 
