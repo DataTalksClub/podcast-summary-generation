@@ -58,7 +58,11 @@ To run the application, do the following:
 docker-compose up -d
 
 # Generate a podcast summary using the OpenAI API key.
- python main_openai.py  --input episode.md --output episode_summary_openai.md
+python main_openai.py  --input episode.md --output episode_summary_openai.md
+
+# Generate a podcast summary using the GroqCloud API key.
+python main.py  --input episode.md --output episode_summary_groq.md
+
 
 # Run the Streamlit application
 python run_streamlit_app.py
