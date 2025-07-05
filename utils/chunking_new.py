@@ -1,4 +1,7 @@
 def chunk_text(text, max_chars=3000, overlap=200):
+    """
+    Split text into chunks of max_chars length with given overlap.
+    """
     words = text.split()
     chunks = []
     start = 0
@@ -13,19 +16,26 @@ def chunk_text(text, max_chars=3000, overlap=200):
 def chunk_transcript_into_groups(timestamps):
     """
     Accepts a list of (timestamp, topic) tuples.
-    Returns a list of (start_index, end_index) groups for themed segments.
+    Returns a list of (start_time, end_time) tuples grouping related timestamps.
+    
+    NOTE: timestamps[i][0] should be a datetime or comparable numeric time.
+    This example assumes timestamps are datetime.timedelta or datetime objects for subtraction.
     """
     groups = []
-    current_group = []
     start_time = timestamps[0][0]
+    current_group = [timestamps[0]]
 
-    for i in range(len(timestamps)):
-        current_group.append(timestamps[i])
-        # End group if large jump or logical split; placeholder for real logic
-        if i == len(timestamps) - 1 or (timestamps[i+1][0] - timestamps[i][0]).seconds > 300:
-            end_time = timestamps[i][0]
+    for i in range(1, len(timestamps)):
+        current_time = timestamps[i][0]
+        prev_time = timestamps[i - 1][0]
+        # If gap > 5 minutes, start a new group
+        if (current_time - prev_time).total_seconds() > 300:
+            end_time = prev_time
             groups.append((start_time, end_time))
-            if i + 1 < len(timestamps):
-                start_time = timestamps[i + 1][0]
-                current_group = []
+            start_time = current_time
+            current_group = []
+        current_group.append(timestamps[i])
+
+    # Append last group
+    groups.append((start_time, current_group[-1][0]))
     return groups
