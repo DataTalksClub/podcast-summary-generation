@@ -16,11 +16,9 @@ def main():
     # Load the Markdown transcript
     podcast_text = load_text(args.input)
 
-    # Initialize the LLM client
+    # Generate the summary
     llm = GroqLLM()
-
-    # Generate the summary (no timestamps passed, so chunk by text length)
-    summary, partials = summarize_podcast_full(llm, podcast_text)
+    summary, _ = summarize_podcast_full(llm, podcast_text)
 
     # Save the summary as Markdown
     save_text(summary, args.output)
