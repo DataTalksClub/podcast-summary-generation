@@ -5,7 +5,8 @@ from groq import Groq
 
 from llms.base import LLMInterface  # Remove if unused
 #from pipeline.prompt_template_new import build_prompt
-from pipeline.prompt_chunking import build_prompt
+#from pipeline.prompt_chunking import build_prompt
+from pipeline.prompt_chunking_v2 import build_prompt
 
 load_dotenv()
 
