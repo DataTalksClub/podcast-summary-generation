@@ -68,6 +68,9 @@ python main.py  --input episode.md --output episode_summary_groq.md
 #Evaluate the timestamp chunks related to the topics using LLMs.
 python main_new_chunking.py  --input episode.md --output episode_timestamps.md
 
+#Evaluate the timestamp chunks related to the topics using LLMs OpenAI.
+python main_new_openai_chunking.py  --input episode.md --output episode_timestamps_openai.md
+
 # Divide the chunks included in the markdown file (episode_timestamps.md) into multiple chunk files inside the chunks folder.
 python divide_chunks.py
 
