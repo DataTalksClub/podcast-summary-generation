@@ -1,64 +1,81 @@
-**Chunk Title:** Eddy's Career Journey & Background  
-**Start - End:** 00:00:00 - 00:02:14  
+**Chunk Title:** Eddy's Career Journey in Data  
+**Start - End:** 00:00:00 - 00:06:20  
 **Transcript:**  
 [00:00:00] Host: Let’s get started. This week, we’ll discuss Digital Data Warehousing and FinOps. We have a special guest today, Eddy Zulkifly, a staff data engineer at Kinaxis. Eddy, did I pronounce it correctly?  
-[01:35] Guest: Yes, it’s Eddy Zulkifly and Kinaxis.  
+[01:35] Eddy: Yes, it’s Eddy Zulkifly and Kinaxis.  
 [01:40] Host: Okay, great. Eddy is building a robust data platform at Kinaxis and has over 10 years of experience in the data field. He’s also a mentor and teaching assistant. Previously, he worked as a senior data scientist at Home Depot, specializing in e-commerce and supply chain analytics. Welcome to the show, Eddy!  
-[01:57] Guest: Thank you, Alexey. It’s a pleasure to be here. I’ll briefly introduce myself. Alexey covered a bit about my experience, but I’ll dive in further.  
-[02:03] Guest: Before we go into the main topic of Digital Data Warehousing and FinOps, let’s start with your background. Can you tell us about your career journey so far?  
-[02:14] Guest: For sure. My journey into data wasn’t exactly linear. Initially, I was supposed to pursue chemical engineering, but midway through considering my options, I was drawn to industrial engineering, particularly the psychology side—designing systems for people, which is essentially user experience. Although I didn’t know it at the time, that focus on building systems for people shaped how I approach data today.  
-[02:14] Guest: My first job was in technology, deep inside supply chains, working in distribution centers. I focused on optimizing space in warehouses, using Excel macros to figure out how many containers would arrive next week or next month. This was tied to staffing demands.
+[01:57] Eddy: Thank you, Alexey. It’s a pleasure to be here. I’ll briefly introduce myself. Alexey covered a bit about my experience, but I’ll dive in further.  
+[02:03] Eddy: Before we go into the main topic of Digital Data Warehousing and FinOps, let’s start with your background. Can you tell us about your career journey so far?  
+[02:14] Alexey: For sure. My journey into data wasn’t exactly linear. Initially, I was supposed to pursue chemical engineering, but midway through considering my options, I was drawn to industrial engineering, particularly the psychology side—designing systems for people, which is essentially user experience. Although I didn’t know it at the time, that focus on building systems for people shaped how I approach data today.  
+[02:14] Eddy: My first job was in technology, deep inside supply chains, working in distribution centers. I focused on optimizing space in warehouses, using Excel macros to figure out how many containers would arrive next week or next month. This was tied to staffing demands.  
+[02:14] Eddy: I moved through several roles—supply chain, e-commerce merchandising, and business intelligence. However, it wasn’t always about Python or SQL. My first role was in a distribution center, where I had to move out of the city and come into the office. While it wasn’t the typical data analyst role, it was a great learning experience. Looking back, it provided a solid foundation for analytics. Excel remains the universal language for business. No matter how nice your dashboard is, the main question from stakeholders will always be, “Can I have this in an Excel file?”  
+[02:14] Eddy: My journey into data was driven by curiosity. I didn’t have access to Tableau at first, so I used Tableau Public, learning from YouTube and different creators. Eventually, my organization gained access to Alteryx, which I loved because it allowed quick analysis with a low-code approach. I got certified in Alteryx.  
+[02:14] Eddy: At the same time, I was pursuing a master’s in analytics, which led me to discover Python and build modern data stacks with an ELT approach. Now, I work as a staff data engineer at Kinaxis, focusing on building data sets and dashboards for our FinOps team to optimize cloud spend and ensure the platform runs efficiently.  
+[02:14] Eddy: I think of FinOps as process optimization, similar to my early work in a physical warehouse but now applied in a digital warehousing context. A lot of the skills I learned early on still apply today, from Excel all the way to Python, Git, and the command line.  
+[06:20] Eddy: What I also noticed is that you’re currently a data engineer, but you were previously working in data science. How did the switch happen?  
 
 ---
 
-**Chunk Title:** Transitioning from Data Science to Data Engineering  
-**Start - End:** 00:06:20 - 00:07:48  
+**Chunk Title:** Transition to Data Engineering  
+**Start - End:** 00:06:20 - 00:09:44  
 **Transcript:**  
-[06:20] Guest: I think of FinOps as process optimization, similar to my early work in a physical warehouse but now applied in a digital warehousing context. A lot of the skills I learned early on still apply today, from Excel all the way to Python, Git, and the command line.  
-[06:33] Guest: What I also noticed is that you’re currently a data engineer, but you were previously working in data science. How did the switch happen?  
-[06:33] Host: I’d like to clarify that my title is senior data engineer, but I moved from a business analyst role to more of a data engineering role. Working as a business analyst, my focus was on building dashboards. That’s where I first learned Tableau Public and attended events like Makeover Monday, where you were given a dataset and had to create narratives and charts.  
-[07:48] Guest: Absolutely, I think a data analyst background makes the transition to data engineering easier. The foundational knowledge is already there, especially in understanding how data flows and what the needs of the business are. The skills in analysis and creating reports, dashboards, and interpreting data directly translate.
+[06:20] Alexey: I’d like to clarify that my title is senior data engineer, but I moved from a business analyst role to more of a data engineering role. Working as a business analyst, my focus was on building dashboards. That’s where I first learned Tableau Public and attended events like Makeover Monday, where you were given a dataset and had to create narratives and charts.  
+[06:33] Eddy: Moving into data engineering, I realized my true passion lay in the technical side. I had a great manager who told me that whenever I discussed Tableau or dashboards, my eyes would light up. That’s when I realized I enjoyed working on the backend side of things. That’s why I decided to pivot my career to data engineering.  
+[06:33] Eddy: This is a common question in our data engineering course. Our course is designed for people coming from a software engineering background, but we often get asked, “I’m a data analyst—can I transition to data engineering?” Does the background of an analyst make this transition easier?  
+[07:48] Alexey: Absolutely, I think a data analyst background makes the transition to data engineering easier. The foundational knowledge is already there, especially in understanding how data flows and what the needs of the business are. The skills in analysis and creating reports, dashboards, and interpreting data directly translate. The main difference will be shifting from more front-end roles, like working with Tableau or Power BI, to focusing on back-end processes, such as data pipelines, databases, and automating workflows.  
+[08:00] Eddy: It’s great to hear that. A lot of people are curious about this shift. One challenge often mentioned in data engineering is working with the command line, Docker, and Terraform. How was your experience transitioning to these tools?  
+[08:06] Alexey: Yes, I agree. When I started learning Docker and Terraform, it felt overwhelming because as a data person, we’re often used to working with UI tools. I came from an Alteryx background, which has a low-code approach. Moving to the command line was a big change. But once I started getting used to it, it all clicked.  
+[08:17] Eddy: Now, working in data engineering, Docker and Terraform are critical tools for building infrastructure and managing environments. I realized that once you get comfortable with one language or tool, it’s easier to pick up others. It’s about building a mindset where you can apply the concepts across different technologies. It’s not as daunting as it seems at first.  
+[08:17] Eddy: That’s interesting. Funny enough, when we were building the course for Data Engineering, we assumed that everyone would already be familiar with Docker. We thought it would just be a brief warm-up session for those who were unfamiliar. However, it turned out to be one of the most challenging weeks for participants.  
+[09:03] Alexey: I have a similar experience. When I first encountered Docker, I was introduced to development containers. I had some colleagues in Toronto who were explaining development containers using a JSON file. When I tried explaining it to data folks, they found it difficult to grasp because it wasn’t a standard approach like other tools we use. It’s not really DevOps; it’s more about configuring a file, but it’s a whole different way of working. It takes time to get used to, especially for those who are more familiar with GUI-based tools.  
+[09:28] Eddy: It’s great that you brought that up. I can see how that shift would be a challenge. But now that you’re more comfortable with Docker and Terraform, do you think it’s easier to learn new tools?  
+[09:44] Alexey: Definitely. The key is the mindset of understanding the fundamentals and getting comfortable with one tool first. From there, it’s much easier to pick up new tools because the concepts tend to overlap. Whether you’re working with Python, Terraform, or any other tool, they all serve a similar purpose—they help automate processes and manage infrastructure efficiently.  
 
 ---
 
-**Chunk Title:** Learning Tools: Command Line & Docker  
-**Start - End:** 00:08:00 - 00:09:44  
+**Chunk Title:** Tools and Learning in Data Analytics  
+**Start - End:** 00:09:44 - 00:20:14  
 **Transcript:**  
-[08:00] Guest: It’s great to hear that. A lot of people are curious about this shift. One challenge often mentioned in data engineering is working with the command line, Docker, and Terraform. How was your experience transitioning to these tools?  
-[08:06] Host: Yes, I agree. When I started learning Docker and Terraform, it felt overwhelming because as a data person, we’re often used to working with UI tools. I came from an Alteryx background, which has a low-code approach. Moving to the command line was a big change. But once I started getting used to it, it all clicked.  
-[08:17] Guest: Now, working in data engineering, Docker and Terraform are critical tools for building infrastructure and managing environments. I realized that once you get comfortable with one language or tool, it’s easier to pick up others. It’s about building a mindset where you can apply the concepts across different technologies. It’s not as daunting as it seems at first.  
-[09:03] Host: It’s great that you brought that up. I can see how that shift would be a challenge. But now that you’re more comfortable with Docker and Terraform, do you think it’s easier to learn new tools?
+[09:44] Eddy: I will definitely shout out to you what you have done. Through my connections at Home Depot, some folks in the US told me about the Data Talks Club. That’s how I heard about the Data Engineering Zoom Camp. I remember it was interesting because the first thing you taught was Docker and Terraform. For most data folks, it was new and overwhelming. We’re used to working with a UI, but moving to a command-line interface felt strange.  
+[08:18] Eddy: I came from an Alteryx background, where everything was low-code. But after getting used to it, I found that Docker and Terraform, as well as other languages, become easier to understand. Once you get comfortable with one language, many of the concepts carry over to the others.  
+[09:29] Eddy: It’s funny with Docker because we expected that everyone signing up knew it. When we built the course, we assumed Docker was something everyone was familiar with, so we included a warm-up week for those who didn’t know it. The idea was that they would pick it up during that time and then the actual content would begin. But it turned out to be the most difficult week, and we definitely didn’t expect that.  
+[10:00] Alexey: I have a similar story. In the Docker space, I had colleagues in Toronto talking about dev containers. I went to a couple of meetups where they would give you a dev container JSON file for tutorials. It’s an abstraction of Docker, but even then, when I tried explaining it to data folks, they felt confused because they had never worked with it before. They’d say, “I’m not in DevOps,” but it’s not exactly DevOps—it’s just configuring a file. Working with Docker and development containers requires some getting used to.  
+[10:49] Eddy: If all you did before was business analytics, and now you suddenly need to work with Docker, everything related to this feels overwhelming. It might seem like devops, something complicated. But once you dive into it, you realize it's not devops; it's something different, something you can learn.  
+[11:13] Alexey: You worked at Home Depot, and for me, Home Depot was notable for hosting a Kaggle competition. I think it was one of the first Kaggle competitions I participated in. Was it about forecasting? I can’t quite recall, but I remember it being an awesome experience. Can you tell us more about your work there? Were you still focused on physical warehouses, or were you already transitioning to digital warehouses?  
+[11:54] Eddy: My time at Home Depot was a discovery process where I explored different aspects of my degree. Part of my degree focused on logistics and optimization, so I had periods where I worked in the warehouse. To give context, think of the equivalent of Home Depot in Europe as something like an Obi or Bauhaus. In Southeast Asia, where I'm from, it could be something like Mr. DIY or Daiso. These are stores that sell products like screws, hammers, and outdoor furniture.  
+[12:31] Eddy: The most interesting time for me was during the holiday seasons, particularly September and December. That’s when Home Depot sold a lot of Halloween products, like skeletons and dinosaurs. A typical workflow for me during that period involved forecasting based on orders. We had to figure out how many containers of goods were arriving, how they were packaged, and what products they contained.  
+[12:56] Eddy: Once we figured out the size of the boxes, we had to estimate how much space they would occupy in the warehouse. After that, we calculated how much labor was required to store them. Later, when we needed to send the products to stores, we’d figure out how many people were needed to pick, package, and ship the items. There were many questions to consider, and we used various tools, like Excel macros, to determine the best configuration to store these products.  
+[13:38] Eddy: At the time, we also did something called preload optimization, which involved engineers and warehouse staff figuring out how to maximize trailer space when shipping products to stores. We manually solved problems like the knapsack problem using Excel, which was quite manual. Looking back, I realize that today software from companies like Kanexis automates a lot of this work, making it much easier.  
+[14:39] Alexey: Interesting! You must be an expert with Excel macros.  
+[14:44] Eddy: I had to pick up a lot of skills. That was my introduction to programming. I remember using the "record" function in Excel to create macros by performing actions like selecting cells, then seeing the code. It was a great starting point. Over time, I learned how to define objects and refine the macros to make them more efficient.  
+[15:10] Eddy: I even created a website once. I had a database of music bootlegs—concert videos that fans film themselves. I exchanged DVDs of these recordings with people from all over the world. Using Excel, I created a website. It had a macro that published an HTML page and then uploaded it via FTP. At the time, it was mind-blowing to me.  
+[16:06] Alexey: That’s interesting! I have a similar story, but we can talk about that later.  
+[16:13] Eddy: Excel is surprisingly powerful. There’s so much you can do with it. You could even play games like Space Invaders or Doom in Excel if you wanted.  
 
 ---
 
-**Chunk Title:** Excel's Role in Warehousing  
-**Start - End:** 00:12:31 - 00:14:44  
+**Chunk Title:** Home Depot to Digital Warehousing  
+**Start - End:** 00:20:14 - 00:24:47  
 **Transcript:**  
-[12:31] Guest: The most interesting time for me was during the holiday seasons, particularly September and December. That’s when Home Depot sold a lot of Halloween products, like skeletons and dinosaurs. A typical workflow for me during that period involved forecasting based on orders. We had to figure out how many containers of goods were arriving, how they were packaged, and what products they contained.  
-[12:56] Guest: Once we figured out the size of the boxes, we had to estimate how much space they would occupy in the warehouse. After that, we calculated how much labor was required to store them. Later, when we needed to send the products to stores, we’d figure out how many people were needed to pick, package, and ship the items. There were many questions to consider, and we used various tools, like Excel macros, to determine the best configuration to store these products.  
-[14:39] Host: I had to pick up a lot of skills. That was my introduction to programming. I remember using the "record" function in Excel to create macros by performing actions like selecting cells, then seeing the code. It was a great starting point.  
-[14:44] Guest: I even created a website once. I had a database of music bootlegs—concert videos that fans film themselves. I exchanged DVDs of these recordings with people from all over the world. Using Excel, I created a website. It had a macro that published an HTML page and then uploaded it via FTP. At the time, it was mind-blowing to me.
+[16:26] Alexey: I’ve seen people create art in Excel, and there are even Excel competitions. In those competitions, participants have to create complex models to solve specific problems. If you can do it faster, there are people willing to pay for those skills.  
+[16:43] Eddy: I just checked the competition, and it was Home Depot Product Search. It was about predicting the relevance of search results on Home Depot’s website. People would type a search, and the task was to predict the relevance of the products that came up. It was one of my first exposures to these kinds of problems.  
+[17:22] Alexey: That sounds like it was related to cosine similarity.  
+[17:27] Eddy: I didn’t realize that Home Depot had physical stores. I thought it was just an online store because I participated in that competition and knew the name. They have a big team, and I thought it was just an online store for screws. But it turns out they have a lot of physical stores too.  
+[17:51] Alexey: Yes, Home Depot has a lot of stores in Canada, the US, and Mexico. It’s a pretty big operation.  
+[17:59] Eddy: It’s a huge operation, and you need a huge warehouse to manage all that inventory. You were working on optimizing those warehouses, right?  
+[18:12] Alexey: Yes, I was involved in the backend processes. We had distribution centers for larger products, which were shipped to stores. On the merchandising side, we had planograms, which are configurations that show where products should be placed in the store. There’s a whole science behind this.  
+[18:29] Eddy: We had heat maps that showed where sales were coming from, and a dedicated team worked on optimizing store layouts to maximize revenue. Certain products were placed closer to the exits, while others were at the back to get customers to walk around more. It’s similar to how grocery stores place milk at the back to get people to walk through the aisles.  
+[18:47] Eddy: Did you use Excel for that as well?  
+[19:17] Alexey: For merchandising, the team used tools like Alteryx and Tableau. We also had in-house software that mapped sales data to store layouts and planograms.  
+[19:40] Eddy: Is this part of merchandising an art or a science?  
+[19:46] Alexey: It’s called assortment planning. Each store has a slightly different plan based on the region and customer preferences. We would tweak the planograms based on sales data to match local buying habits.  
+[20:08] Eddy: Did you ever work in a physical warehouse, like actually handling the products?  
+[20:14] Alexey: Yes, my first job at Home Depot was at a distribution center. I was involved in loading products onto racks. Later, I worked more on the corporate side, focusing on planograms and data analytics.  
 
 ---
 
-**Chunk Title:** Experiences at Home Depot  
-**Start - End:** 00:16:43 - 00:20:47  
-**Transcript:**  
-[16:43] Guest: I just checked the competition, and it was Home Depot Product Search. It was about predicting the relevance of search results on Home Depot’s website. People would type a search, and the task was to predict the relevance of the products that came up. It was one of my first exposures to these kinds of problems.  
-[17:22] Host: That sounds like it was related to cosine similarity.  
-[17:27] Guest: I didn’t realize that Home Depot had physical stores. I thought it was just an online store because I participated in that competition and knew the name. They have a big team, and I thought it was just an online store for screws. But it turns out they have a lot of physical stores too.  
-[17:51] Host: Yes, Home Depot has a lot of stores in Canada, the US, and Mexico. It’s a pretty big operation.  
-[17:59] Guest: It’s a huge operation, and you need a huge warehouse to manage all that inventory. You were working on optimizing those warehouses, right?  
-[18:12] Host: Yes, I was involved in the backend processes. We had distribution centers for larger products, which were shipped to stores. On the merchandising side, we had planograms, which are configurations that show where products should be placed in the store. There’s a whole science behind this.  
-[19:40] Guest: Is this part of merchandising an art or a science?  
-[19:46] Host: It’s called assortment planning. Each store has a slightly different plan based on the region and customer preferences. We would tweak the planograms based on sales data to match local buying habits.  
-[20:08] Guest: Did you ever work in a physical warehouse, like actually handling the products?  
-[20:14] Host: Yes, my first job at Home Depot was at a distribution center. I was involved in loading products onto racks. Later, I worked more on the corporate side, focusing on planograms and data analytics.  
-
----
-
-**Chunk Title:** Warehousing: Physical vs Digital  
-**Start - End:** 00:19:17 - 00:26:27  
+**Chunk Title:** Warehousing: Physical and Digital  
+**Start - End:** 00:20:14 - 00:26:27  
 **Transcript:**  
 [19:17] Eddy: Is this part of merchandising an art or a science?  
 [19:40] Alexey: It’s called assortment planning. Each store has a slightly different plan based on the region and customer preferences. We would tweak the planograms based on sales data to match local buying habits.  
@@ -70,22 +87,23 @@
 [21:04] Alexey: That’s interesting. I worked with the Canadian branch of Home Depot, so the situation may have been a bit different here.  
 [21:18] Eddy: You worked later in your career to optimize distribution centers, which are essentially warehouses, right?  
 [21:43] Alexey: Yes, that’s correct. It’s very much like working in a warehouse.  
-[21:49] Eddy: We also wanted to talk about digital warehousing. What exactly is that, and how does it work? Let's start with physical warehouses first. A warehouse is a space with tracks where products are stored. There are processes for people, robots, or machines to move the products and deliver them to the appropriate location. For example, getting products from racks and loading them into cars for distribution. That's a physical warehouse.  
+[21:49] Eddy: Physical vs. digital warehousing: Analogies and key differences. We also wanted to talk about digital warehousing. What exactly is that, and how does it work? Let's start with physical warehouses first. A warehouse is a space with tracks where products are stored. There are processes for people, robots, or machines to move the products and deliver them to the appropriate location. For example, getting products from racks and loading them into cars for distribution. That's a physical warehouse.  
 [21:57] Alexey: In this case, I'd like to thank you for that context. I’ve worked at Home Depot for a long time, and I recall working in a physical warehouse. But when I became a senior data engineer, I realized I was still working in a warehouse—just a digital one. In this case, think of moving data like moving products. You're ingesting data, similar to trucks delivering goods into a warehouse. We use Google Cloud and BigQuery to store the data. Inside the warehouse, you have internal processes. We used orchestrators to run SQL queries, which helped transform and process the data. Once the data is ready, it is sent to a consumption layer, like a BI tool, such as Tableau or Looker.  
 [22:36] Eddy: Data engineers build pipelines or write Python scripts to move data from the source into the warehouse. Inside the warehouse, we use transformation tools like data build tools to clean and organize the data. The data is then put into tables or racks to be easily accessible. Once it’s organized, you have a service account or process to send the data to tools like Looker or PowerBI. Finally, dashboards are created for the end users to generate insights. The process of working in a digital warehouse is quite similar to a physical one.  
 [23:38] Eddy: I just realized that the term "data warehouse" includes the word "warehouse," which is really a distribution center. The goal of a physical warehouse is to receive products in large trucks and then store them in racks. The products are organized in a way that makes them easy to access. Once the products are organized, they can be moved to smaller trucks for delivery to stores. In the same way, data in a digital warehouse is organized to make it easy to access.  
 [24:34] Alexey: One major difference between digital and physical warehouses is the speed of changes. In my first role in process improvement, we focused on understanding processes and managing change. In a physical warehouse, changes often take a long time because you need approval from various teams. For example, if you need more space or racks, it can cost millions of dollars and require construction.  
-[25:32] Eddy: In a digital warehouse, changes are much quicker. If you need a new data requirement, you can create a new table and optimize it immediately. The feedback loop is much faster, too. You can create a model, send it out, receive feedback, and make adjustments quickly. Another difference is that, in a physical warehouse, you might rely on internal systems or human observation to track products. In a digital warehouse, since everything is in the cloud, you need monitoring systems and tests to ensure everything is working properly.
+[25:32] Eddy: In a digital warehouse, changes are much quicker. If you need a new data requirement, you can create a new table and optimize it immediately. The feedback loop is much faster, too. You can create a model, send it out, receive feedback, and make adjustments quickly. Another difference is that, in a physical warehouse, you might rely on internal systems or human observation to track products. In a digital warehouse, since everything is in the cloud, you need monitoring systems and tests to ensure everything is working properly.  
 
 ---
 
-**Chunk Title:** The Role of Data Engineering  
-**Start - End:** 00:27:50 - 00:29:56  
+**Chunk Title:** Data Analytics and Business Metrics  
+**Start - End:** 00:27:50 - 00:35:28  
 **Transcript:**  
 [27:50] Alexey: My day-to-day work involves both business and technical tasks. One key thing I've learned is the importance of understanding business requirements. In the analytics space, we focus on building metric trees to understand which metrics the business cares about and what factors affect them. We recently worked on a metric tree for the FinOps team to understand the cost factors inside the data warehouse and cloud platform.  
 [27:57] Eddy: Building a metric tree helps everyone gain a better understanding of data and how to build datasets that answer important business questions. Another important task is using a data spec, which I learned from Zack Wilson’s course. Business requirements can be vague, so it's important to translate them into clear technical data requirements. This way, you can ensure the data pipeline meets business needs, define metric definitions, set pipeline frequencies, and identify any assumptions or unknowns.  
 [28:21] Eddy: Once you have everything outlined, you can communicate with the business and get alignment. This alignment is crucial because it gives everyone a clear understanding of the direction. I believe this step is one of the most important tasks for data engineers. Once the requirements are clear, it's easier to move forward with building the necessary systems.  
-[29:16] Eddy: Another part of my role involves standing up a digital warehouse by setting up our stack. We use cloud platforms and a mix of open-source tools to maximize business value while ensuring the system is easy to maintain for engineers and analysts within the team.
+[29:16] Eddy: Another part of my role involves standing up a digital warehouse by setting up our stack. We use cloud platforms and a mix of open-source tools to maximize business value while ensuring the system is easy to maintain for engineers and analysts within the team.  
+[29:56] Eddy: Kanexis offers a platform for supply chain management, covering all aspects of the supply chain, including transportation and orders. The platform handles a wide range of use cases, all aimed at optimizing supply chain operations.  
 
 ---
 
@@ -102,14 +120,12 @@
 [34:10] Alexey: Yes, exactly. In a previous company I worked for, the procurement department was responsible for tools that cost money. For example, if I needed something like Klaviyo or Google Workspace, I would go through them to figure out how to purchase these tools. For AWS, we could negotiate special contracts based on how many instances we wanted in advance, which made them cheaper. This is a form of cost optimization. So, when you deal with AWS, you negotiate based on the amount of money you want to spend and the services you need.  
 [34:15] Eddy: Yes, exactly. Our team uses the data we generate to understand the costs and usage of our systems. From there, we figure out how to negotiate with cloud vendors to optimize the costs. Typically, we have an idea of how long our servers will run, and we can negotiate discounts for longer-term commitments.  
 [35:28] Eddy: So, it’s pretty similar to what I just described?  
-[35:57] Alexey: Yes, exactly. Reservation instances are part of the FinOps process as well.
 
 ---
 
-**Chunk Title:** Cost Management and Tools  
-**Start - End:** 00:41:55 - 00:46:17  
+**Chunk Title:** Cost Forecasting and Evaluation  
+**Start - End:** 00:36:11 - 00:44:05  
 **Transcript:**  
-[41:55] Eddy: Can you tell us more about the problems you solve and what kind of solutions you use to address them?  
 [36:11] Alexey: When addressing cost and usage, it’s important to understand both the business requirements and what’s expected in the coming months. For example, forecasting usage helps in understanding costs. Virtual machines generate significant costs, so knowing when and how long to run them is crucial. Configuring virtual machines requires knowing the required RAM and storage, as these are cost factors. Additionally, depending on the operating system—whether Linux or Windows—there may be licensing considerations, and cloud platforms may offer discounts or bundle licenses.  
 [36:18] Eddy: The cloud pricing model is complex, with different factors like RAM, storage, and licensing that contribute to costs. To manage this, we run models across different cloud providers to compare which offers the best value.  
 [37:53] Eddy: So, you evaluate multiple clouds, right? You know the requirements for virtual machines, and then you compare the deals you can get from Google Cloud, AWS, Azure, and so on. Based on that, you can make a decision on which provider to go with?  
@@ -117,66 +133,67 @@
 [38:53] Eddy: Interesting. When it comes to tools or solutions to these problems, it sounds a lot like demand forecasting to me.  
 [39:03] Alexey: Right. There’s demand forecasting, inventory planning, and other features. We also do a form of what-if analysis, similar to Excel, where you input different variables to see the potential outcomes. We use a more advanced version internally that looks at parameters and adjusts them to optimize revenue or profits.  
 [39:09] Eddy: So, inventory planning and demand forecasting in the cloud is similar to physical operations, right? It sounds like we’re talking about distribution centers and similar physical optimizations.  
-[39:47] Alexey: Yes, absolutely. My experience from that part of my career has been very helpful here.
+[39:47] Alexey: Yes, absolutely. My experience from that part of my career has been very helpful here.  
 
 ---
 
-**Chunk Title:** FinOps and Data Engineering Insights  
+**Chunk Title:** FinOps Education and Standards  
+**Start - End:** 00:40:18 - 00:46:17  
+**Transcript:**  
+[40:18] Alexey: Where can we learn more about FinOps?  
+[40:22] Alexey: There's a FinOps foundation, and they are considered the de facto player in the FinOps space. They offer training courses online to help people upskill in FinOps. Right now, I’m also working towards certification as a FinOps practitioner to fully understand the various aspects of FinOps. The foundation provides a nice framework document that details what FinOps teams do, with shared principles.  
+[40:22] Eddy: For example, when dealing with cloud costs, you need to ensure that the teams using the cloud are accountable for their costs. This is where tagging systems come in, making sure that each virtual machine is tied to a specific department. There’s also a process of regularly reviewing costs. On the data side, you want to make sure access to data is timely. This means ensuring that your data is fresh daily and available for monthly or weekly reporting, depending on requirements.  
+[41:37] Alexey: Yes, that's correct. FinOps is all about using the cloud in the most cost-effective way.  
+[41:55] Eddy: It opens up opportunities where, if you're working with physical infrastructure, you'd need experience to build a rack from raw materials. But in the cloud, you can focus on understanding cloud architecture and data to figure out how to make your processes more efficient. For instance, instead of relying on traditional servers, you could opt for a serverless architecture or deploy containers. This way, you only pay for what you use, rather than paying for fixed assets.  
+[42:06] Eddy: In cloud platforms, there are services like cloud functions or Lambda functions that run as needed. I find this really interesting, as with enough knowledge of the cloud, you can work with your team to figure out cost optimization strategies. A key area of focus is storage—how to minimize costs by switching between different types of storage. For example, Azure offers hot and cold storage, and GCP has similar definitions. Understanding these storage options and optimizing them can result in significant savings.  
+[44:05] Eddy: Another thing I was thinking about is the evolution of DevOps. Later, we had MLOps and DataOps—MLOps is machine learning operations, which is essentially DevOps for ML, and DataOps is data engineering operations, essentially DevOps for data engineering.  
+
+---
+
+**Chunk Title:** Understanding FinOps and DataOps  
 **Start - End:** 00:44:41 - 00:49:37  
 **Transcript:**  
-[44:41] Eddy - line: While you were explaining, I realized that even though FinOps isn’t directly related to DevOps, there are similarities. In DevOps, the focus is not just on tools but also on processes—ensuring software is reliable, testable, and delivered efficiently. FinOps appears to have a similar focus on processes, streamlining cost optimization efforts, and leveraging tools to achieve this. Would you say that’s accurate?  
-[46:17] Alexey - line: Yes, exactly. You hit the nail on the head. The processes in FinOps mirror some of the DataOps practices as well. For example, using CI/CD pipelines to validate datasets or check how new data impacts downstream dashboards employs similar methodologies.  
-[47:09] Eddy - line: When I previously asked about your role as a Staff Data Engineer, you mentioned business and technical aspects. Could we revisit that discussion now that we’ve talked about FinOps?  
-[47:41] Alexey - line: Sure! As a Staff Data Engineer, my role is multifaceted. On the technical side, I work on deploying pipelines, fixing bugs, and maintaining data quality through DataOps processes. On the strategic side, I focus on defining business metrics like unit economics, which help optimize costs and performance. This dual focus allows us to build a robust data platform for FinOps.  
-[48:01] Eddy - line: So, if I understand correctly, you’re building a data platform specifically for FinOps, enabling cost optimization and better decision-making?  
-[48:51] Alexey - line: That’s right. We manage data from cloud platforms, apply business logic and metric definitions, and generate unit economics to evaluate cloud performance.  
-[49:04] Eddy - line: Does Kinaxis have a dedicated FinOps team? How do data engineers collaborate with them?  
-[49:29] Alexey - line: We work closely with various business users, including engineers, product owners, and infrastructure teams. These stakeholders play a role in managing and optimizing cloud spending, ensuring efficient collaboration across the board.
+[00:44:41] Eddy: While you were explaining, I realized that even though FinOps isn’t directly related to DevOps, there are similarities. In DevOps, the focus is not just on tools but also on processes—ensuring software is reliable, testable, and delivered efficiently. FinOps appears to have a similar focus on processes, streamlining cost optimization efforts, and leveraging tools to achieve this. Would you say that’s accurate?  
+[00:46:17] Alexey: Yes, exactly. You hit the nail on the head. The processes in FinOps mirror some of the DataOps practices as well. For example, using CI/CD pipelines to validate datasets or check how new data impacts downstream dashboards employs similar methodologies.  
+[00:47:09] Eddy: When I previously asked about your role as a Staff Data Engineer, you mentioned business and technical aspects. Could we revisit that discussion now that we’ve talked about FinOps?  
+[00:47:41] Alexey: Sure! As a Staff Data Engineer, my role is multifaceted. On the technical side, I work on deploying pipelines, fixing bugs, and maintaining data quality through DataOps processes. On the strategic side, I focus on defining business metrics like unit economics, which help optimize costs and performance. This dual focus allows us to build a robust data platform for FinOps.  
+[00:48:01] Eddy: So, if I understand correctly, you’re building a data platform specifically for FinOps, enabling cost optimization and better decision-making?  
+[00:48:51] Alexey: That’s right. We manage data from cloud platforms, apply business logic and metric definitions, and generate unit economics to evaluate cloud performance.  
+[00:49:04] Eddy: Does Kinaxis have a dedicated FinOps team? How do data engineers collaborate with them?  
+[00:49:29] Alexey: We work closely with various business users, including engineers, product owners, and infrastructure teams. These stakeholders play a role in managing and optimizing cloud spending, ensuring efficient collaboration across the board.  
 
 ---
 
-**Chunk Title:** Educational Journey and Challenges  
-**Start - End:** 00:49:37 - 00:55:14  
+**Chunk Title:** Pursuing Education and Time Management  
+**Start - End:** 00:49:37 - 00:54:22  
 **Transcript:**  
-[49:37] Eddy - header: Eddy’s master’s degree and closing thoughts - line: Alexey  
-[49:37] Eddy - line: I'm almost done with my master's, hopefully by the end of this year. I'm doing a program called the Master’s in Analytics from Georgia Tech. So far, in terms of my learnings, it’s been pretty cool because it’s more of an applied analytics degree. Since I work in data quite a bit, you get exposed to different approaches in analytics.  
-[50:25] Eddy - line: We explore descriptive, prescriptive, and predictive analytics, figuring out how to implement data to solve business problems in this context.  
-[50:32] Eddy - line: Since you're based in Toronto and this is Georgia Tech, I assume it's...  
-[50:32] Alexey - line: '...in Atlanta, in the United States. It’s interesting because my organization, Home Depot, is also based in Atlanta. While taking the program, I met a lot of Home Depot colleagues from the U.S. who were also enrolled.'  
-[51:11] Eddy - line: That’s how I learned about cool open-source technologies like dbt (data build tool), picked up Python, explored the cloud, and a range of other tools. These experiences helped me transition from being more of a business user to a software and data engineer.  
-[51:11] Eddy - line: When I was doing my master’s in business intelligence, it was almost 10 years ago. This year marks the 10th anniversary since I graduated.  
-[51:45] Alexey - line: Back then, I was working as a freelancer. It was more of a part-time job. I’d take a contract, complete it, and then move on to the next one, spending around 20 hours per week. You, however, work full-time as a staff data engineer. It must be challenging to manage both at the same time, right?  
-[51:45] Alexey - line: Yeah, exactly. One of the things that interested me about the Georgia Tech program was its analytical rigor. Based on reviews, they expect you to pick up on the math and learn Python as required.  
-[52:25] Eddy - line: In one of the courses, we had to learn D3, a JavaScript library, which was pretty intense. I don’t think many people use D3 now, but it was a great opportunity to learn something new and apply it.  
-[52:25] Eddy - line: Pursuing my master’s while working full-time has been about managing my time and responsibilities carefully. I try not to overwork myself, usually taking one course per semester. I also choose topics related to my job so I can apply what I’m learning directly at work.  
-[52:25] Eddy - line: This approach has added value because I can immediately apply my university learnings to my job in analytics. It helps reinforce my understanding and makes the knowledge more practical.  
-[53:55] Eddy - line: This is something we talked about. You also run—you’re into running and were running marathons. This year, you’re slowly returning to that. Preparing for a marathon takes a lot of time, and then you’re also doing a master’s, working, and probably want to do something else apart from these things, right?  
-[54:16] Alexey - line: Absolutely. The secret is to take one course per semester.  
+[00:49:37] Eddy: I'm almost done with my master's, hopefully by the end of this year. I'm doing a program called the Master’s in Analytics from Georgia Tech. So far, in terms of my learnings, it’s been pretty cool because it’s more of an applied analytics degree. Since I work in data quite a bit, you get exposed to different approaches in analytics.  
+[00:50:25] Eddy: We explore descriptive, prescriptive, and predictive analytics, figuring out how to implement data to solve business problems in this context.  
+[00:50:32] Alexey: '...in Atlanta, in the United States. It’s interesting because my organization, Home Depot, is also based in Atlanta. While taking the program, I met a lot of Home Depot colleagues from the U.S. who were also enrolled.'  
+[00:51:11] Eddy: That’s how I learned about cool open-source technologies like dbt (data build tool), picked up Python, explored the cloud, and a range of other tools. These experiences helped me transition from being more of a business user to a software and data engineer.  
+[00:51:45] Alexey: Back then, I was working as a freelancer. It was more of a part-time job. I’d take a contract, complete it, and then move on to the next one, spending around 20 hours per week. You, however, work full-time as a staff data engineer. It must be challenging to manage both at the same time, right?  
+[00:52:25] Alexey: Yeah, exactly. One of the things that interested me about the Georgia Tech program was its analytical rigor. Based on reviews, they expect you to pick up on the math and learn Python as required.  
+[00:53:55] Eddy: In one of the courses, we had to learn D3, a JavaScript library, which was pretty intense. I don’t think many people use D3 now, but it was a great opportunity to learn something new and apply it.  
 
 ---
 
-**Chunk Title:** Learning and Community Engagement  
-**Start - End:** 00:55:14 - 00:58:47  
+**Chunk Title:** Balancing Education, Work, and Personal Life  
+**Start - End:** 00:54:22 - 01:00:05  
 **Transcript:**  
-[55:14] Eddy - line: When I was preparing for a marathon, I think I took a lighter course. One thing I’ll say about the analytics community at Georgia Tech is that it’s a really great online community. They have a Google Sheet where they collect course reviews and calculate the estimated workload for each course.  
-[54:22] Eddy - line: My rule is to do the math—if I want to double up, my max is 20 hours. If a course is around 10, 8, or 12 hours, I’ll likely just take one at a time. It’s interesting that people in the community spend time building tools like this to help manage workloads. I found that really helpful as well.  
-[55:14] Eddy - line: That makes sense. The program is about analytics, so there should be analytical ways to support decision-making in this case, right?  
-[55:23] Alexey - line: Exactly!  
-[55:31] Eddy - line: I can see your cat.  
-[55:37] Alexey - line: Maybe one last question, and then we’ll call it a day. You mentioned you’re either recently preparing for or have already earned a certificate in some field. You seem to have quite a few certificates. Are you actively investing your time in extra learning, in addition to your master’s? How do you manage that, given we only have 24 hours in a day?  
-[56:05] Alexey - line: Exactly, and I think this applies to everyone. Nowadays, when I talk to folks interested in breaking into data, I encourage them to focus on certifications that align with their interests and passions.  
-[56:05] Eddy - line: As a data engineer, you develop the skill of learning as you go. This has helped me become more efficient in learning and strategic in acquiring the knowledge I need to get the job done.  
-[56:05] Eddy - line: Pursuing my master’s and picking up certificates has taught me to build habits around learning. Finding your community is essential. Toronto, for example, is a big tech hub for data and analytics. Attending meetups and learning from others in the city has helped me build relationships and understand market trends.  
-
----
-
-**Chunk Title:** Mentorship and Giving Back  
-**Start - End:** 00:58:47 - 00:59:54  
-**Transcript:**  
-[57:01] Eddy - line: Another thing I’ve found valuable is applying what I learn. At my organization, there’s openness to building and applying skills from school. Shoutout to my team at Home Depot for creating a great environment for learning and growth.  
-[57:01] Eddy - line: Lastly, having an accountability partner helps. I have monthly calls with a friend where we discuss our goals. They’re not even in data, but it helps to have someone to keep you on track.  
-[58:47] Eddy - line: Finally, I believe in giving back to the community. Platforms like Data Talks Club are great because they teach others for free. Last year, I joined ADP List as a mentor to share what I’ve learned.  
-[58:47] Eddy - line: I wish someone had guided me 10 years ago when I started my career as a data engineer. Engineers are often too busy fixing things to mentor others. I hope to inspire others to pursue this path and succeed.  
-[59:32] Eddy - line: Thank you, Eddy. It was amazing talking to you. Thanks a lot for joining us today and sharing your experience.  
-[59:32] Alexey - line: I took a lot of notes—it was a very productive discussion. Now I know what FOPS is; I had no idea this even existed. Thanks for taking the time. It was truly amazing.  
-[59:32] Alexey - line: Thank you so much, Alexey. It was great to be part of the talk today.
+[00:54:22] Eddy: This approach has added value because I can immediately apply my university learnings to my job in analytics. It helps reinforce my understanding and makes the knowledge more practical.  
+[00:54:22] Eddy: This is something we talked about. You also run—you’re into running and were running marathons. This year, you’re slowly returning to that. Preparing for a marathon takes a lot of time, and then you’re also doing a master’s, working, and probably want to do something else apart from these things, right?  
+[00:55:14] Alexey: Absolutely. The secret is to take one course per semester.  
+[00:55:31] Eddy: When I was preparing for a marathon, I think I took a lighter course. One thing I’ll say about the analytics community at Georgia Tech is that it’s a really great online community. They have a Google Sheet where they collect course reviews and calculate the estimated workload for each course.  
+[00:56:05] Eddy: My rule is to do the math—if I want to double up, my max is 20 hours. If a course is around 10, 8, or 12 hours, I’ll likely just take one at a time. It’s interesting that people in the community spend time building tools like this to help manage workloads. I found that really helpful as well.  
+[00:56:05] Eddy: That makes sense. The program is about analytics, so there should be analytical ways to support decision-making in this case, right?  
+[00:57:14] Alexey: Exactly!  
+[00:57:23] Eddy: I can see your cat.  
+[00:57:31] Alexey: Maybe one last question, and then we’ll call it a day. You mentioned you’re either recently preparing for or have already earned a certificate in some field. You seem to have quite a few certificates. Are you actively investing your time in extra learning, in addition to your master’s? How do you manage that, given we only have 24 hours in a day?  
+[00:58:05] Alexey: Exactly, and I think this applies to everyone. Nowadays, when I talk to folks interested in breaking into data, I encourage them to focus on certifications that align with their interests and passions.  
+[00:58:47] Eddy: As a data engineer, you develop the skill of learning as you go. This has helped me become more efficient in learning and strategic in acquiring the knowledge I need to get the job done.  
+[00:58:47] Eddy: Pursuing my master’s and picking up certificates has taught me to build habits around learning. Finding your community is essential. Toronto, for example, is a big tech hub for data and analytics. Attending meetups and learning from others in the city has helped me build relationships and understand market trends.  
+[00:59:01] Eddy: Another thing I’ve found valuable is applying what I learn. At my organization, there’s openness to building and applying skills from school. Shoutout to my team at Home Depot for creating a great environment for learning and growth.  
+[00:59:32] Eddy: Lastly, having an accountability partner helps. I have monthly calls with a friend where we discuss our goals. They’re not even in data, but it helps to have someone to keep you on track.  
+[00:59:32] Eddy: Finally, I believe in giving back to the community. Platforms like Data Talks Club are great because they teach others for free. Last year, I joined ADP List as a mentor to share what I’ve learned.  
+[00:59:54] Eddy: I wish someone had guided me 10 years ago when I started my career as a data engineer. Engineers are often too busy fixing things to mentor others. I hope to inspire others to pursue this path and succeed.  
+[01:00:05] Alexey: Thank you, Eddy. It was amazing talking to you. Thanks a lot for joining us today and sharing your experience.
