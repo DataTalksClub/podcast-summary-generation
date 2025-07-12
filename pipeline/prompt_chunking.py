@@ -1,4 +1,4 @@
-def build_grouping_prompt(podcast_text):
+def build_prompt(podcast_text):
     return f"""You are an expert podcast editor. Your task is to organize a podcast transcript into logically grouped, thematic segments based on timestamped titles and their content.
 
 ### Goal:

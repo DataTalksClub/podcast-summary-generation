@@ -4,7 +4,8 @@ from dotenv import load_dotenv
 from groq import Groq
 
 from llms.base import LLMInterface  # Remove if unused
-from pipeline.prompt_template_new import build_prompt
+#from pipeline.prompt_template_new import build_prompt
+from pipeline.prompt_chunking import build_prompt
 
 load_dotenv()
 
@@ -28,7 +29,8 @@ class GroqLLM(LLMInterface):
         Returns:
             The LLM response string.
         """
-        prompt = build_prompt(text, format_type=format_type)
+        #prompt = build_prompt(text, format_type=format_type)
+        prompt = build_prompt(text) 
         response = self.client.chat.completions.create(
             messages=[{"role": "user", "content": prompt}],
             model=self.model
