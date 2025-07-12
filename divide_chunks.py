@@ -1,5 +1,6 @@
 import os
 import re
+import argparse
 
 def parse_chunks_from_markdown(md_path):
     """
@@ -9,7 +10,6 @@ def parse_chunks_from_markdown(md_path):
     with open(md_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Regular expression to match each chunk
     pattern = re.compile(
         r"\*\*Chunk \d+: (?P<title>.+?)\*\*\n"
         r"\*\*Start - End:\*\* (?P<start>[\d:]+) - (?P<end>[\d:]+)\n"
@@ -44,13 +44,14 @@ def save_chunks_to_folder(chunks, folder="chunks"):
 
     print(f"✅ {len(chunks)} chunks saved to folder '{folder}'.")
 
-def split_md_chunks(md_file_path):
-    """
-    Main function to read and split chunks from the markdown file.
-    """
-    chunks = parse_chunks_from_markdown(md_file_path)
-    save_chunks_to_folder(chunks)
+def main():
+    parser = argparse.ArgumentParser(description="Split a Markdown podcast file into timestamp-based chunks.")
+    parser.add_argument("--input", "-i", required=True, help="Path to the input Markdown file")
+    parser.add_argument("--output_dir", "-o", default="chunks", help="Folder to save individual chunk files")
+    args = parser.parse_args()
 
-# Example usage
+    chunks = parse_chunks_from_markdown(args.input)
+    save_chunks_to_folder(chunks, args.output_dir)
+
 if __name__ == "__main__":
-    split_md_chunks("episode_timestamps.md")  # <- replace with your actual file path
+    main()

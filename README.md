@@ -72,7 +72,7 @@ python main_new_chunking.py  --input episode.md --output episode_timestamps.md
 python main_new_openai_chunking.py  --input episode.md --output episode_timestamps_openai.md
 
 # Divide the chunks included in the markdown file (episode_timestamps.md) into multiple chunk files inside the chunks folder.
-python divide_chunks.py
+python divide_chunks.py --input episode_timestamps_openai.md --output_dir chunks
 
 
 # Run the Streamlit application
