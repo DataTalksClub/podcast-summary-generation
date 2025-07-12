@@ -95,6 +95,7 @@ setup(
         "requests",
         "requests-toolbelt",
         "rpds-py",
+        "rouge-score",
         "scikit-learn",
         "scipy",
         "shellingham",

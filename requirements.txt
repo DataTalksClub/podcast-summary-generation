@@ -133,5 +133,6 @@ webencodings==0.5.1
 yarg==0.1.9
 zipp==3.23.0
 zstandard==0.23.0
+rouge-score== 0.1.2
 
 
