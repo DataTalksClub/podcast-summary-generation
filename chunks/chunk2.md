@@ -1,0 +1,11 @@
+# Career Journey and Transition to Data Engineering
+**Start - End:** 2:14 - 6:33
+
+**Transcript:**
+
+[2:14] Eddy: My first job was in technology, deep inside supply chains, working in distribution centers. I focused on optimizing space in warehouses, using Excel macros to figure out how many containers would arrive next week or next month. This was tied to staffing demands.
+[2:14] Eddy: I moved through several roles—supply chain, e-commerce merchandising, and business intelligence. However, it wasn’t always about Python or SQL. My first role was in a distribution center, where I had to move out of the city and come into the office. While it wasn’t the typical data analyst role, it was a great learning experience. Looking back, it provided a solid foundation for analytics. Excel remains the universal language for business. No matter how nice your dashboard is, the main question from stakeholders will always be, “Can I have this in an Excel file?”
+[2:14] Eddy: My journey into data was driven by curiosity. I didn’t have access to Tableau at first, so I used Tableau Public, learning from YouTube and different creators. Eventually, my organization gained access to Alteryx, which I loved because it allowed quick analysis with a low-code approach. I got certified in Alteryx.
+[2:14] Eddy: At the same time, I was pursuing a master’s in analytics, which led me to discover Python and build modern data stacks with an ELT approach. Now, I work as a staff data engineer at Kinaxis, focusing on building data sets and dashboards for our FinOps team to optimize cloud spend and ensure the platform runs efficiently.
+[6:20] Alexey: I’d like to clarify that my title is senior data engineer, but I moved from a business analyst role to more of a data engineering role. Working as a business analyst, my focus was on building dashboards. That’s where I first learned Tableau Public and attended events like Makeover Monday, where you were given a dataset and had to create narratives and charts.
+[6:33] Eddy: Moving into data engineering, I realized my true passion lay in the technical side. I had a great manager who told me that whenever I discussed Tableau or dashboards, my eyes would light up. That’s when I realized I enjoyed working on the backend side of things. That’s why I decided to pivot my career to data engineering.
