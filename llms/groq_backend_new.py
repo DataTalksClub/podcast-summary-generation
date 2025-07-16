@@ -3,8 +3,7 @@ from typing import Optional
 from dotenv import load_dotenv
 from groq import Groq
 
-from llms.base import LLMInterface  # Remove if unused
-from pipeline.prompt_chunking_v2 import build_prompt
+from llms.base import LLMInterface 
 
 load_dotenv()
 
