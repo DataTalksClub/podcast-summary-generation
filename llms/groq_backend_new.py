@@ -4,37 +4,33 @@ from dotenv import load_dotenv
 from groq import Groq
 
 from llms.base import LLMInterface  # Remove if unused
-#from pipeline.prompt_template_new import build_prompt
-#from pipeline.prompt_chunking import build_prompt
 from pipeline.prompt_chunking_v2 import build_prompt
 
 load_dotenv()
 
 class GroqLLM(LLMInterface):
-    def __init__(self, api_key: Optional[str] = None):
-        api_key = api_key or os.getenv("GROQ_API_KEY")
-        if not api_key:
+    def __init__(self, model: str = "llama-3.3-70b-versatile", api_key: Optional[str] = None):
+        self.api_key = api_key or os.getenv("GROQ_API_KEY")
+        if not self.api_key:
             raise ValueError("GROQ_API_KEY not found in environment.")
-        self.client = Groq(api_key=api_key)
-        self.model = "llama-3.3-70b-versatile"
-        #self.model = "llama-3.1-8b-instant"
+        self.client = Groq(api_key=self.api_key)
+        self.model = model 
 
-    def summarize(self, text: str, format_type: Optional[str] = None) -> str:
-        """
-        Summarizes or extracts content from text using the Groq LLM.
+    def generate(self, prompt:str, system_prompt:Optional[str] = None) -> str:
 
-        Args:
-            text: The transcript or text chunk to summarize.
-            format_type: Optional; type of prompt to use.
-                         If None, uses combined prompt covering all points.
+        messages = [] 
 
-        Returns:
-            The LLM response string.
-        """
-        #prompt = build_prompt(text, format_type=format_type)
-        prompt = build_prompt(text) 
-        response = self.client.chat.completions.create(
-            messages=[{"role": "user", "content": prompt}],
-            model=self.model
-        )
-        return response.choices[0].message.content.strip()
+        if system_prompt:
+            messages.append({"role":"system", "content":system_prompt})
+        messages.append({"role":"user", "content":prompt})
+
+        try:
+            response = self.client.chat.completions.create(
+                messages=messages,
+                model=self.model
+            )
+            return response.choices[0].message.content.stript()
+        except Exception as e:
+            raise   RuntimeError(f"Groq API call failed: {e}")
+
+
