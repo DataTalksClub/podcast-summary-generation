@@ -1,5 +1,5 @@
 import argparse
-from llms.openai_backend import OpenAILLM
+from llms.openai_backend_old import OpenAILLM
 from pipeline.summarizer import summarize_podcast_full
 from utils.io_utils import load_text, save_text
 from utils.evaluation import evaluate_summary

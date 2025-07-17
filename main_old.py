@@ -1,5 +1,5 @@
 import argparse
-from llms.groq_backend import GroqLLM
+from llms.groq_backend_old import GroqLLM
 from pipeline.summarizer import summarize_podcast_full
 from utils.io_utils import load_text, save_text
 from utils.evaluation import evaluate_summary
