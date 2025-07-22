@@ -1,4 +1,4 @@
-from utils.chunking import chunk_text
+from utils.chunking.chunking import chunk_text
 
 def summarize_podcast_full(llm, podcast_text):
     chunks = chunk_text(podcast_text)

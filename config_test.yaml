@@ -1,4 +1,4 @@
 llm: "openai"
 model: "4o-mini"
-input_path: "podcasts/episode_6.md"
-output_path: "outputs/tests.md"
+chunking_strategy: "recursive_splitter"
+input_url: "https://raw.githubusercontent.com/DataTalksClub/datatalksclub.github.io/refs/heads/main/_podcast/s01e05-mentoring.md"

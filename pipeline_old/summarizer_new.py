@@ -1,4 +1,4 @@
-from utils.chunking_new import chunk_text, chunk_transcript_into_groups, parse_time_to_seconds
+from utils.chunking.chunking_new import chunk_text, chunk_transcript_into_groups, parse_time_to_seconds
 
 def extract_text_by_time_range(transcript, start_time, end_time) -> str:
     """Extract concatenated transcript lines where time is between start_time and end_time."""
