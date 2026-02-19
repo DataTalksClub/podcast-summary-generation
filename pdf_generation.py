@@ -1,5 +1,5 @@
 import pdfkit
 
-def generate_pdf(html_content, output_file):
-    """Generate a PDF file from HTML content."""
-    pdfkit.from_string(html_content, output_file)
+def generate_pdf(input_html, output_pdf):
+    """Generate a PDF from HTML content."""
+    pdfkit.from_file(input_html, output_pdf)
